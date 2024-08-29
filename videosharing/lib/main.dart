@@ -4,38 +4,44 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void main() async {
+void main() {
+  WidgetsFlutterBinding.ensureInitialized;
+
   
   runApp( const MyApp());
 }
 
-class MyApp extends ConsumerWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return const MaterialApp(
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple,
+        ),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
       
     );
   }
 }
 
-class MyWidget extends StatelessWidget {
-  // for practice only ----- delete this class
-  const MyWidget({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
 
   @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Column(
-      children: [
-        TextField(
-          decoration: InputDecoration(
-            focusedBorder: OutlineInputBorder(),
-          ),
-        ),
-      ],
-    ));
+    return const Placeholder();
   }
 }

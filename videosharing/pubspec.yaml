@@ -29,32 +29,87 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   bottom_sheet: ^4.0.0
-  cached_network_image: ^3.2.3
+  cached_network_image: ^3.2.3        #--------also dbestech
   cloud_firestore: ^4.8.5
+  # ---- dbestech ------
+  cross_connectivity: ^3.2.0
+  # ---- dbestech ------//>>
+
   ffmpeg_kit_flutter: ^6.0.2
   firebase_auth: ^4.7.3
   firebase_core: ^2.15.1
+
+  # ---- dbestech ------
+  firebase_messaging: ^14.7.21
+  # ---- dbestech ------//>>
+
   firebase_storage: ^11.2.6
   flutter:
     sdk: flutter
+  # ---- dbestech ------
+  flutter_screenutil: ^5.9.0
+  # ---- dbestech ------//>
+  flutter_staggered_grid_view: ^0.7.0
+
+  # ---- dbestech ------
+  flutter_dotenv: ^5.1.0
+  flutter_hooks: ^0.20.5
+  flutter_image_slideshow: ^0.1.6
+  flutter_otp_text_field: ^1.1.3+2
+  flutter_rating_bar: ^4.0.1
+  flutter_vector_icons: ^2.0.0
+  # ---- dbestech ------//>
+
   flutter_riverpod: ^2.3.7
+
+  # ---- dbestech ------
+  flutter_svg: ^2.0.10+1
+  # ---- dbestech ------//>>
+
   font_awesome_flutter: ^10.5.0
   fraction: ^5.0.2
+
+  # ---- dbestech ------
+  get_storage: 2.1.1
+  get_time_ago: ^1.3.1
+  go_router: ^13.2.3
+  google_fonts: ^6.2.1
+  google_maps_flutter: ^2.6.1
+  # ---- dbestech ------//>>
+
+  google_nav_bar: ^5.0.6
   google_sign_in: ^6.1.4
   image_picker: ^1.0.4
   intl: ^0.18.1
+
   # ...
   # json_annotation: ^4.9.0
   # ...
+
+  # ---- dbestech ------
+  page_view_dot_indicator: ^2.3.0
+  # ---- dbestech ------//>>
+
   path: ^1.8.3
   path_provider: ^2.1.1
   permission_handler: ^10.4.5
+
+  # ---- dbestech ------
+  provider: ^6.1.2
+  shimmer: ^3.0.0
+  # ---- dbestech ------//>>
+
   timeago: ^3.6.0
   uuid: ^4.0.0
   video_editor: ^3.0.0
   video_player: ^2.7.1
-  flutter_staggered_grid_view: ^0.7.0
-  google_nav_bar: ^5.0.6
+
+  # ---- dbestech ------
+  webview_flutter_android: 3.16.3
+  webview_flutter: ^4.8.0
+  webview_flutter_wkwebview: ^3.13.1
+  webview_universal: ^0.0.5
+  # ---- dbestech ------//>>
 
 
   # The following adds the Cupertino Icons font to your application.
