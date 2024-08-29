@@ -41,13 +41,13 @@ class GradientBtn extends StatelessWidget {
           border: Border.all(width: 0.5.h, color: borderColor ?? Kolors.kWhite),
         ),
         child: Center(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 3.w),
-            child: ReusableText(
-                text: text,
-                style: appStyle(
-                    textSize ?? 13, borderColor ?? Kolors.kWhite, fontweight)),
-          ),
+          // child: Padding(
+          //   padding: EdgeInsets.symmetric(horizontal: 3.w),
+          //   child: ReusableText(
+          //       text: text,
+          //       style: appStyle(
+          //           textSize ?? 13, borderColor ?? Kolors.kWhite, fontweight)),
+          // ),
         ),
       ),
     );

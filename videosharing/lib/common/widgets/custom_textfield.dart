@@ -16,7 +16,8 @@ class CustomTextField extends StatelessWidget {
    required this.keyboardType,
    this.validator,
    this.suffixIcon,
-   this.obscureText,
+   required this.obscureText,
+  //  this.obscureText,
    this.onEditingComplete
    });
 
@@ -25,7 +26,7 @@ final String hintText;
 final TextInputType keyboardType;
 final String? Function(String?)? validator;
 final Widget? suffixIcon;
-final bool? obscureText;
+final bool obscureText;
 final void Function()? onEditingComplete;
 
   @override
@@ -49,12 +50,12 @@ final void Function()? onEditingComplete;
         decoration: InputDecoration(
           hintText: hintText,
           suffixIcon: suffixIcon,
-          hintStyle: appStyle(11, Kolors.kGray, FontWeight.normal),
+          // hintStyle: appStyle(11, Kolors.kGray, FontWeight.normal),
           border: InputBorder.none
         ),
         controller: controller,
         cursorHeight: 20,
-        style: appStyle(11, Kolors.kDark, FontWeight.normal), 
+        // style: appStyle(11, Kolors.kDark, FontWeight.normal), 
         validator: validator,// FontWeight has two packages--- choose corect one
       ),
     );

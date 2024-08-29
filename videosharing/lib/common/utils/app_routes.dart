@@ -9,11 +9,11 @@ final GoRouter _router =
     GoRouter(navigatorKey: navigatorKey, initialLocation: '/', routes: [
   GoRoute(
     path: '/',
-    builer: (context, state) => const SplashScreen(),
+    builder: (context, state) => const SplashScreen(),
   ),
   GoRoute(
     path: '/home',
-    builer: (context, state) => const AppEntryPoint(),
+    builder: (context, state) => const AppEntryPoint(),
   ),
 ]);
 

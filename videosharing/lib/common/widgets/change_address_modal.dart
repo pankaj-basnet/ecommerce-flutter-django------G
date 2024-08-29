@@ -13,7 +13,7 @@ Future<dynamic> changeAddressBottomSheet(BuildContext context) {
     builder: (BuildContext context) {
       return Container(
         height: ScreenUtil().screenHeight,
-        decoration: BoxDecoration(borderRadius: kRadiusTop),
+        // decoration: BoxDecoration(borderRadius: kRadiusTop),
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 12),
           physics: const NeverScrollableScrollPhysics(),
@@ -21,10 +21,10 @@ Future<dynamic> changeAddressBottomSheet(BuildContext context) {
             SizedBox(
               height: 10.h,
             ),
-            Center(
-                child: ReusableText(
-                    text: AppText.kCheckoutAddress,
-                    style: appStyle(16, Kolors.kPrimary, FontWeight.w500))),
+            // Center(
+            //     child: ReusableText(
+            //         text: AppText.kCheckoutAddress,
+            //         style: appStyle(16, Kolors.kPrimary, FontWeight.w500))),
             SizedBox(
               height: 10.h,
             ),
@@ -32,10 +32,10 @@ Future<dynamic> changeAddressBottomSheet(BuildContext context) {
             SizedBox(
               height: 10.h,
             ),
-            ReusableText(
-              text: AppText.kCheckoutAddressText,
-              style: appStyle(13, Kolors.kGray, FontWeight.w500),
-            ),
+            // ReusableText(
+            //   text: AppText.kCheckoutAddressText,
+            //   style: appStyle(13, Kolors.kGray, FontWeight.w500),
+            // ),
             SizedBox(
               height: 10.h,
             ),

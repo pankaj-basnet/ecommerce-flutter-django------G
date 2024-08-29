@@ -13,7 +13,8 @@ class SensitiveContainer extends StatelessWidget {
       if (isConnected == true) {
         return child;
       }
-      return const OfflinePage();
+      return const Text("OfflinePage()");
+      // return const OfflinePage();
     });
   }
 }

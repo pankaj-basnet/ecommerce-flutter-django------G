@@ -25,8 +25,34 @@ edit D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\com
 
 kDebugMode --- kReleaseMode
 =================================================================================
+"D:\src--FOLDER\FLUTTER\TUTORIALS\ecommerce-flutter-django-dbestech--scr\Screenshot (6815) ------- dependencies---project---.png"
 
 
+edit videosharing\.env.development
+edit videosharing\.env.production
+
+edit videosharing\lib\main.dart
+  await dotenv.load(fileName: Environment.fileName);
+
+print('Environment.apiKey')
+=================================================================================
+
+
+<!-- in mac ios laptop ---error -->
+cd ios
+pod install
+
+mistake---found later-->edit D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\ios\.gitignore
+
+edit videosharing\.gitignore
+=================================================================================
+<!-- =======         time        57 mins         ======= -->
+<!-- -- CHAPTER -             Initializing ScreenUtils and setting up go router          ======== -->
+<!-- -- CHAPTER -             Initializing ScreenUtils and setting up go router          ======== -->
+<!-- -- CHAPTER -             Initializing ScreenUtils and setting up go router          ======== -->
+<!-- -- CHAPTER -             Initializing ScreenUtils and setting up go router          ======== -->
+<!-- -- CHAPTER -             Initializing ScreenUtils and setting up go router          ======== -->
+<!-- -- CHAPTER -             Initializing ScreenUtils and setting up go router          ======== -->
 
 
 
@@ -34,67 +60,81 @@ kDebugMode --- kReleaseMode
 
 
 
+<!-- time 59 min 13 sec -->
+return ScreenUtilInit(builder: (context{return MaterialApp(
+=================================================================================
 
+Size screenSize = MediaQuery.of(context).size;
+    return ScreenUtilInit(
+        designSize: screenSize,
+        minTextAdapt: true,
+        splitScreenMode: false,
+        useInheritedMediaQuery: true,
+        builder: (_, child) {
+
+
+
+
+router --- app_routes.dart--- GoRouter get router
+
+ib\common\utils\app_routes.dart
 
 =================================================================================
 
 
 
-
-
-=================================================================================
-
-
-
-
+lib\src\splashscreen\views\splashscreen_page.dart
 
 =================================================================================
 
+<!-- time 1 hr 04 min 12 sec -->
 
-
-
-
-=================================================================================
-
-
-
-
+ScreenUtilInit
 
 =================================================================================
 
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
+commented temporarily  --- kRadiusTop --- AppStyle --- ReusableText
 
 
 
 
 =================================================================================
 
+<!-- time 1 hr 04 min 18 sec -->
+
+
+
+
+=================================================================================
+# =======       CHAPTER --    SPLASHSCREEN AND INITIALIZING GETSTORAGE
+# =======       CHAPTER --    SPLASHSCREEN AND INITIALIZING GETSTORAGE
+# =======       CHAPTER --    SPLASHSCREEN AND INITIALIZING GETSTORAGE
+# =======       CHAPTER --    SPLASHSCREEN AND INITIALIZING GETSTORAGE
+# =======       CHAPTER --    SPLASHSCREEN AND INITIALIZING GETSTORAGE
+# =======       CHAPTER --    SPLASHSCREEN AND INITIALIZING GETSTORAGE
+# =======       CHAPTER --    SPLASHSCREEN AND INITIALIZING GETSTORAGE
+# =======       CHAPTER --    SPLASHSCREEN AND INITIALIZING GETSTORAGE
+
+<!--        =======       time 1 hr 05 min 20 sec        =======        -->
+
 
 
 
 
 =================================================================================
 
+edit lib\const\resource.dart
 
-
-
+  static const String ASSETS_IMAGES_SPLASHSCREEN_JPEG =
+      'assets/images/a-splashscreen.jpg';
 
 =================================================================================
 
+lib\src\splashscreen\views\splashscreen_page.dart
 
+Scaffold(--- Container----BoxDecoration--- DecorationImage
 
-
+"D:\src--FOLDER\FLUTTER\TUTORIALS\ecommerce-flutter-django-dbestech--scr\Screenshot (6816)---------ecom logo image------ time 1 hr 07 min -----.png"
 
 =================================================================================
 

@@ -27,7 +27,8 @@ class CustomeTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       cursorColor: Colors.black,
-      maxLines:  maxLines??1,
+      maxLines:  1,
+      // maxLines:  maxLines ?? 1,
       textInputAction: TextInputAction.next,
       onEditingComplete: onEditingComplete,
 
@@ -42,12 +43,12 @@ class CustomeTextField extends StatelessWidget {
       }
       },
 
-      style: appStyle(12, Kolors.kDark, FontWeight.normal),
+      // style: appStyle(12, Kolors.kDark, FontWeight.normal),
       decoration: InputDecoration(
         hintText: hintText,
         isDense: true,
         contentPadding: const EdgeInsets.all(9),
-        hintStyle: appStyle(12, Kolors.kGray, FontWeight.normal),
+        // hintStyle: appStyle(12, Kolors.kGray, FontWeight.normal),
         errorBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.red, width: 0.7),
           borderRadius: BorderRadius.all(Radius.circular(6)),

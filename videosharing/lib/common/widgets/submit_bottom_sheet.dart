@@ -12,7 +12,7 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
       builder: (BuildContext context) {
         return Container(
           height: 150.h,
-          decoration: BoxDecoration(borderRadius: kRadiusTop),
+          // decoration: BoxDecoration(borderRadius: kRadiusTop),
           child: ListView(
             children: [
               Padding(

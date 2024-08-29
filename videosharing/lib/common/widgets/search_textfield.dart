@@ -43,7 +43,7 @@ class SearchTextField extends StatelessWidget {
       //   }
       // },
 
-      style: appStyle(12, Kolors.kDark, FontWeight.normal),
+      // style: appStyle(12, Kolors.kDark, FontWeight.normal),
       decoration: InputDecoration(
               
               hintText: hintText,
@@ -51,7 +51,7 @@ class SearchTextField extends StatelessWidget {
               isDense: true,
               contentPadding: const EdgeInsets.all(6),
 
-              hintStyle: appStyle(12, Kolors.kDark, FontWeight.normal),
+              // hintStyle: appStyle(12, Kolors.kDark, FontWeight.normal),
               // contentPadding: const EdgeInsets.only(left: 24),
               errorBorder: const OutlineInputBorder(
                   borderSide:  BorderSide(color: Colors.red, width: 0.7),

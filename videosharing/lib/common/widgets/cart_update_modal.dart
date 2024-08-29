@@ -11,7 +11,7 @@ void showCartPopup(BuildContext context) {
         return CupertinoActionSheet(
           title: Text(
             'Update Cart Item Quantity',
-            style: appStyle(18.0, Kolors.KGrayLight, FontWeight.bold),
+            // style: appStyle(18.0, Kolors.KGrayLight, FontWeight.bold),
           ),
           message: const Text(
             "By updating the cart the app will refetch the data",

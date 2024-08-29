@@ -19,18 +19,18 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
     builder: (BuildContext context) {
       return Container(
         height: 200,
-        decoration: BoxDecoration(borderRadius: kRadiusTop),
+        // decoration: BoxDecoration(borderRadius: kRadiusTop),
         child: ListView(
           children: [
             SizedBox(
               height: 10.h,
             ),
-            Center(
-              child: ReusableText(
-                text: AppText.kLogout,
-                style: appStyle(16, Kolors.kPrimary, FontWeight.w500),
-              ),
-            ),
+            // Center(
+            //   child: ReusableText(
+            //     text: AppText.kLogout,
+            //     style: appStyle(16, Kolors.kPrimary, FontWeight.w500),
+            //   ),
+            // ),
             SizedBox(
               height: 10.h,
             ),
@@ -41,11 +41,11 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
             SizedBox(
               height: 10.h,
             ),
-            Center(
-              child: ReusableText(
-                  text: AppText.kLogoutText,
-                  style: appStyle(14, Kolors.kGray, FontWeight.w500)),
-            ),
+            // Center(
+            //   child: ReusableText(
+            //       text: AppText.kLogoutText,
+            //       style: appStyle(14, Kolors.kGray, FontWeight.w500)),
+            // ),
             SizedBox(
               height: 20.h,
             ),
@@ -58,7 +58,7 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
                     text: "Cancel",
                     borderColor: Kolors.kDark,
                     btnColor: Kolors.kWhite,
-                    onTap: () => Navigation.pop(context),
+                    onTap: () => Navigator.pop(context),
                     btnHieght: 35.h,
                     radius: 16,
                     btnWidth: ScreenUtil().screenWidth / 2.2,

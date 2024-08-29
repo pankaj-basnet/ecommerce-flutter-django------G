@@ -26,11 +26,11 @@ class CustomAppBar extends HookWidget {
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(padding: EdgeInsets.only(left: 3.w),
-          child: ReusableText(
-            text: "Location",
-            style: appStyle(12, Kolors.kGray, FontWeight.normal)
-          ),),
+          // Padding(padding: EdgeInsets.only(left: 3.w),
+          // child: ReusableText(
+          //   text: "Location",
+          //   style: appStyle(12, Kolors.kGray, FontWeight.normal)
+          // ),),
           SizedBox(
             height: 5.h,
           ),
@@ -50,7 +50,7 @@ class CustomAppBar extends HookWidget {
               )
             ],
           )
-        ],,
+        ]
       ),
     );
   }

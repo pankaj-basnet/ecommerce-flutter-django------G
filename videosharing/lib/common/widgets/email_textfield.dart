@@ -43,14 +43,14 @@ class EmailTextField extends StatelessWidget {
             return null;
           }
         },
-        style: appStyle(12, Kolors.kDark, FontWeight.normal),
+        // style: appStyle(12, Kolors.kDark, FontWeight.normal),
         decoration: InputDecoration(
           hintText: hintText,
           prefixIcon: prefixIcon,
           isDense: true,
           contentPadding: const EdgeInsets.all(6),
 
-          hintStyle: appStyle(12, Kolors.kGray, FontWeight.normal),
+          // hintStyle: appStyle(12, Kolors.kGray, FontWeight.normal),
           // contentPadding: EdgeInsets.only(left: 24),
           errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(radius ?? 12))),

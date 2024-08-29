@@ -25,11 +25,11 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
               children: [
                 Text(
                   'Fashion App Help Center',
-                  style: appStyle(
-                    18.0,
-                    Kolors.kPrimary,
-                    FontWeight.bold,
-                  ),
+                  // style: appStyle(
+                  //   18.0,
+                  //   Kolors.kPrimary,
+                  //   FontWeight.bold,
+                  // ),
                 ),
 
                 //............
@@ -40,9 +40,10 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
                 Text(
                   'We\'re here to help! Find answers to frequently asked questions or contact ... ...',
                   textAlign: TextAlign.center,
-                  style: appStyle(16.0, Kolors.kDark, FontWeight.normal),
+                  // style: appStyle(16.0, Kolors.kDark, FontWeight.normal),
                 ),
-                SizedBox(height: 15.h),
+                SizedBox(height: 15.0),
+                // SizedBox(height: 15.h),
 
                 // FAQ Section (Replace with actual FAQS)
                 const Text(
@@ -57,10 +58,11 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
                     Icons.keyboard_arrow_right,
                     color: Kolors.kGray,
                   ),
-                  onTap: () {
-                    // Handle FAQ tap (open details page or show answer)
-                  },      //    ======================================================    line 58   ======================================================
-                ),      
+                  // onTap: () {}
+                  // onTap: () {
+                  //   // Handle FAQ tap (open details page or show answer)
+                  // }, //    ======================================================    line 58   ======================================================
+                ),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
                   title: const Text('How do I track my order'),
@@ -68,9 +70,10 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
                     Icons.keyboard_arrow_right,
                     color: Kolors.kGray,
                   ),
-                  onTap: () {
-                    // Handle FAQ tap (open details page or show answer)
-                  },
+                  // onTap: () {},
+                  // onTap: () {
+                  //   // Handle FAQ tap (open details page or show answer)
+                  // },
                 ),
 
                 const SizedBox(height: 15.0),
@@ -81,7 +84,8 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
                   style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
-                  height: 10.h,
+                  height: 10,
+                  // height: 10.h,
                 ),
                 const Row(
                   children: [
@@ -96,27 +100,30 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
                   ],
                 ),
                 SizedBox(
-                  height: 20.h,
+                  height: 20,
+                  // height: 20.h,
                 ),
                 //======================================================================
                 const Row(
                   children: [
                     Icon(MaterialCommunityIcons.phone_outline),
                     SizedBox(
-                        width: 10.0,
-                        Text(
-                          '+860000000000',
-                          style: TextStyle(fontSize: 16.0),
-                        ))
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+860000000000',
+                      style: TextStyle(fontSize: 16.0),
+                    )
                   ],
                 ),
 
-                SizedBox(height: 20.h),
+                SizedBox(height: 20),
+                // SizedBox(height: 20.h),
                 //=====================       104 page no.        ========sn===============
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('Visit Full Help Center'),
-                ),
+                // ElevatedButton(
+                //   // onPressed: () {},
+                //   child: const Text('Visit Full Help Center'),
+                // ),
               ],
             ),
           ),

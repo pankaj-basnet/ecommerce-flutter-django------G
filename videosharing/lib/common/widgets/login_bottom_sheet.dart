@@ -15,18 +15,18 @@ Future<dynamic> loginBottomSheet(BuildContext context) {
       builder: (BuildContext context) {
         return Container(
           height: 200,
-          decoration: BoxDecoration(borderRadius: kRadiusTop),
+          // decoration: BoxDecoration(borderRadius: kRadiusTop),
           child: ListView(
             physics: const NeverScrollableScrollPhysics(),
             children: [
               SizedBox(
                 height: 10,
               ),
-              Center(
-                child: ReusableText(
-                    text: AppText.kLogin,
-                    style: appStyle(16, Kolors.kPrimary, FontWeight.w500)),
-              ),
+              // Center(
+              //   child: ReusableText(
+              //       text: AppText.kLogin,
+              //       style: appStyle(16, Kolors.kPrimary, FontWeight.w500)),
+              // ),
               SizedBox(
                 height: 10,
               ),
@@ -45,10 +45,10 @@ Future<dynamic> loginBottomSheet(BuildContext context) {
               SizedBox(
                 height: 10,
               ),
-              Center(
-                  child: ReusableText(
-                      text: AppText.kLoginText,
-                      style: appStyle(14, Kolors.kGray, FontWeight.w500))),
+              // Center(
+              //     child: ReusableText(
+              //         text: AppText.kLoginText,
+              //         style: appStyle(14, Kolors.kGray, FontWeight.w500))),
               SizedBox(
                 height: 20.h,
               ),
