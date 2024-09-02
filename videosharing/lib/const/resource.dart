@@ -17,8 +17,12 @@ class R {
       'assets/images/checkout.jpg';
 
   static const String ASSETS_IMAGES_EMPTY_JPEG = 'assets/images/empty.jpg';
+
   static const String ASSETS_IMAGES_EXPERIENCE_JPEG =
       'assets/images/experience.jpg';
+  static const String ASSETS_IMAGES_EXPERIENCE3_JPEG =
+      'assets/images/experience3.png';
+
   static const String ASSETS_IMAGES_FAILED_JPEG = 'assets/images/failed.jpg';
   static const String ASSETS_IMAGES_GETSTARTED_JPEG =
       'assets/images/getstarted.jpg';
@@ -29,6 +33,8 @@ class R {
       'assets/images/a-placeholder.jpg';
   static const String ASSETS_IMAGES_WISHLIST_JPEG =
       'assets/images/a-wishlist.jpg';
+  static const String ASSETS_IMAGES_WISHLIST2_JPEG =
+      'assets/images/a-wishlist2.jpg';
 
   // self note ------- self made pics
   /// ![preview](file:///-------videosharing/assets/images/pic1.png) sn=

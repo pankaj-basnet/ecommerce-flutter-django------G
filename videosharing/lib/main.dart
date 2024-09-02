@@ -3,20 +3,30 @@
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart' show MultiProvider; // not necessary ---- error removed when MultiProvider added before adding widgets
 import 'package:videosharing/common/utils/app_routes.dart';
 // import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:videosharing/common/utils/environment.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:videosharing/common/utils/kstrings.dart';
+import 'package:videosharing/src/onboarding/controllers/onboarding_notifier.dart';
 import 'package:videosharing/src/splashscreen/views/splashscreen_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized;
+
   //load the correct environment
   await dotenv.load(fileName: Environment.fileName);
 
-  runApp(const MyApp());
+  await GetStorage.init();
+
+    runApp(MultiProvider(providers: [
+      ChangeNotifierProvider(create: (_) => OnboardingNotifier())
+    ],
+    child: const MyApp(),));
 }
 
 class MyApp extends StatelessWidget {

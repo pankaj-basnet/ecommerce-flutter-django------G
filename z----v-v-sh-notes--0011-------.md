@@ -138,124 +138,267 @@ Scaffold(--- Container----BoxDecoration--- DecorationImage
 
 =================================================================================
 
+<!-- time 1 hr 11 min -->
+get_storage ----- local storage for app
 
+already created lib\common\services\storage.dart
+
+=================================================================================
+
+import 'package:get_storage/get_storage.dart';
+
+
+class Storage---GetStorage().erase(); ---import 'package:get_storage/get_storage.dart';
+  
+
+class Storage {
+  void clear() {
+    GetStorage().erase();
+  }
+
+<!-- videosharing\lib\main.dart -->
+  await GetStorage.init();
+
+if (Storage().getBool('firstOpen') == null) {
+
+=================================================================================
+<!-- time 1 hr 15min -->
+ GoRoute(path: '/onboarding',
+  builder: (context, state) => const OnBoardingScreen(),),
 
 
 
 =================================================================================
 
+create lib\src\onboarding\views\onboarding_page.dart
 
+class OnBoardingScreen extends StatelessWidget {
+
+
+=================================================================================
+
+create lib\src\onboarding\controllers\onboarding_notifier.dart
+
+<!-- youtube ------ time 1 hr 21 mins 28 sec -->
+
+onboarding_notifier.dart --- class OnboardingNotifier
+
+OnboardingNotifier ---- this is provider --- our first provider
+=================================================================================
+
+if new provider created, we initialize it and continue our project
+
+// import 'package:provider/provider.dart' show MultiProvider; // not necessary ---- error removed when MultiProvider added before adding widgets
+
+runApp(MultiProvider(providers: [ ChangeNotifierProvider(create: (_) => OnboardingNotifier())
+
+=================================================================================
+
+<!-- time 1hr29min -->
+          Text(context.watch<OnboardingNotifier>().selectedPage.toString()),
+
+
+using "provider" , change state or variable value in StatelessWidget  --- context.read or context.watch --- get or set state {{sn= mb=}}
+
+first method seen---how to read provider --- {{isn=}} --- change state or variable value in StatelessWidget
+
+=================================================================================
+
+delete code --- first method ---how to read provider --- {{testing done sn= { if clicked on "increment" , set value to "9" on screen of mobile phone screen}}}
+
+<!-- ------------------------------------ -->
+<!-- Column(
+        children: [
+          TextButton(
+            onPressed: () {
+              context.read<OnboardingNotifier>().setSelectedPage = 9;
+            },
+            child: Text('Increment'),
+          ),
+          Text(context.watch<OnboardingNotifier>().selectedPage.toString()),
+        ],
+      ) -->
+<!-- ------------------------------------//>> -->
+
+
+=================================================================================
+<!-- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\onboarding\views\onboarding_page.dart -->
+<!-- lib\src\onboarding\views\onboarding_page.dart -->
+Consumer<OnboardingNotifier> --- with "builder" named argument or parameter ----body: Consumer<OnboardingNotifier>(builder: (context, onboardingNotifier, child) {return Column(
+
+body: Consumer<OnboardingNotifier>(
+        builder: (context, onboardingNotifier, child) {
+          return Column(
+
+big widget passed as "function or widget" to Consumer<OnboardingNotifier> class of "provider" library --- provider/src/....dart 
+=================================================================================
+<!-- time 1hr31min -->
+depending on where you
+if you already grabbed or has "parent Widget" inside Consumer, but (again) if you want to access another provider inside this widget.-----then use, """Consumer --- context of""" of that particular provider , you want to use in that particular page
+
+----------------------------------------------------
+<!-- time 1hr31min50sec -->
+another method to change state --- by initializing provider --- """final pro = Provider.of<OnboardingNotifier>(context);"""
+another method to change state --- access Provider --- final pro = Provider.of<OnboardingNotifier>(context);
+
+we are consuming a provider named "OnboardingNotifier"
+
+ provider named "OnboardingNotifier" is passed as argument for "onboardingNotifier"
+
+instructor made his custom shortcut --- """"Provider.of<MyType>(context)"""" ---        builder: (context, onboardingNotifier, child) {
+
+
+final pro = Provider.of<OnboardingNotifier>(context);
+    return Scaffold(
+      body: Consumer<OnboardingNotifier>(
+        builder: (context, onboardingNotifier, child) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              TextButton(
+                onPressed: () {
+                  pro.setSelectedPage = 5;
+                },
+                child: Text('Increment'),
+              ),
+              Text(pro.selectedPage.toString()),
+            ],
+          );
+        },
+      ),
+
+
+=================================================================================
+
+three ways to access and use provider ------ above three ways seen already
+
+best way to use provider is by using "Consumer" and "context.of" ---withour initializing "Provider"
 
 
 
 =================================================================================
 
-
-
-
-
-=================================================================================
-
-
+<!-- time 1hr33min45sec -->
+if needed , use all three ways to use provider to make code cleaner {isn=}
 
 
 
 =================================================================================
 
+these code deleted ---- lib\src\onboarding\views\onboarding_page.dart
+these code deleted ---- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\onboarding\views\onboarding_page.dart
 
+<!-- 
+class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({super.key});
 
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
+  @override
+  Widget build(BuildContext context) {
+    final pro = Provider.of<OnboardingNotifier>(context);
+    return Scaffold(
+      body: Consumer<OnboardingNotifier>(
+        builder: (context, onboardingNotifier, child) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              TextButton(
+                onPressed: () {
+                  pro.setSelectedPage = 5;
+                },
+                child: Text('Increment'),
+              ),
+              Text(pro.selectedPage.toString()),
+            ],
+          );
+        },
+      ),
+    );
+  }
+} -->
 
 
 
 =================================================================================
 
+{/// Creates a stack layout widget.--class Stack extends MultiChildRenderObjectWidget 
 
+
+
+=================================================================================
+<!-- time 1hr37min20sec -->
+getting page from parent widget
+
+ parent widget is "PageView" {{mb=}}
+ PageView(
+          onPageChanged: (page) {
+            context.read<OnboardingNotifier>().setSelectedPage = page;
+          },
+
+<!-- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\onboarding\controllers\onboarding_notifier.dart -->
+set setSelectedPage(int page) {
+
+    print('---$page-----');
+=================================================================================
+<!-- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\onboarding\views\onboarding_page.dart -->
+
+convert OnBoardingScreen to StatefulWidget
+
+
+class OnBoardingScreen extends StatefulWidget {
+
+
+=================================================================================
+<!-- time 1hr42mins51sec -->
+create videosharing\lib\src\onboarding\widgets
+create videosharing\lib\src\onboarding\widgets\onboarding_page_one.dart
+create videosharing\lib\src\onboarding\widgets\welcomescreen.dart
+
+
+change name of onboarding_page.dart to onboarding_screen.dart
+=================================================================================
+
+use "SizedBox" instead of "Container"
 
 
 
 =================================================================================
 
+<!-- time 1 hr 58 mins 30 sec -->
 
 
-
-
-=================================================================================
-
-
-
-
+class AppText{
+  static const String kGetStarted = "Let's Get Started";
 
 =================================================================================
 
+<!-- time 2hr 01 min -->
+<!-- time 2hr 01 min -->
+<!-- time 2hr 01 min -->
+<!-- time 2hr 01 min -->
+<!-- time 2hr 01 min -->
+<!-- time 2hr 01 min -->
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+notes note made after this
+<!-- time 2hr 03 min 45 sec -->
 
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
+time 2hr 31min --- created lib/src/profile/views/profile_screen.dart
+time 2hr 40min --- working on entrypoint.dart
+time 3hr 06min --- working on home_screen.dart
+D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\z----v-v-sh-notes--0011-------.md
 =================================================================================
 
 
