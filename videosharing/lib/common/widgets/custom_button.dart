@@ -31,25 +31,36 @@ class GradientBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: btnWidth ?? ScreenUtil().screenWidth / 2,
-        height: btnHieght ?? 25.h,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(radius ?? 6),
-          color: btnColor ?? Kolors.kPrimaryLight,
-          border: Border.all(width: 0.5.h, color: borderColor ?? Kolors.kWhite),
-        ),
-        child: Center(
-          // child: Padding(
-          //   padding: EdgeInsets.symmetric(horizontal: 3.w),
-          //   child: ReusableText(
-          //       text: text,
-          //       style: appStyle(
-          //           textSize ?? 13, borderColor ?? Kolors.kWhite, fontweight)),
-          // ),
-        ),
-      ),
-    );
+        onTap: onTap,
+        child: Container(
+          width: btnWidth ?? ScreenUtil().screenWidth / 2,
+          height: btnHieght ?? 25.h,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(radius ?? 6),
+            color: btnColor ?? Kolors.kPrimaryLight,
+            border:
+                Border.all(width: 0.5.h, color: borderColor ?? Kolors.kWhite),
+          ),
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w),
+              // self note ------------------------------------------
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: Kolors.kWhite,
+                  fontSize: 13,
+                ),
+              ),
+
+              // self note ----------------------------------------//>>
+              // child: ReusableText(
+              //     text: text,
+              //       style: appStyle(
+              //           textSize ?? 13, borderColor ?? Kolors.kWhite, fontweight)),
+              // ),
+            ),
+          ),
+        ));
   }
 }

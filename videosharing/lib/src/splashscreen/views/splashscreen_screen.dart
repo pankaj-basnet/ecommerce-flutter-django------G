@@ -21,7 +21,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigator() async {
-    await Future.delayed(const Duration(microseconds: 3000), () {
+    // await Future.delayed(const Duration(microseconds: 8000), () {
+    await Future.delayed(const Duration(milliseconds: 1500), () {
       if (Storage().getBool('firstOpen') == null) {
         // Go to the onboarding screen
         GoRouter.of(context).go('/onboarding');
@@ -44,6 +45,6 @@ class _SplashScreenState extends State<SplashScreen> {
       decoration: BoxDecoration(
         image: DecorationImage(image: AssetImage(R.ASSETS_IMAGES_SPLASHSCREEN_JPEG)),
       ),
-    ));
+    ),);
   }
 }

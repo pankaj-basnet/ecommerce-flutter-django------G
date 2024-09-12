@@ -12,6 +12,8 @@ class OnboardingScreenTwo extends StatelessWidget {
     return SizedBox(
       width: ScreenUtil().screenWidth,
       height: ScreenUtil().screenHeight,
+      //   width: MediaQuery.of(context).size.width, //sn=
+      // height: MediaQuery.of(context).size.height, //sn=
       child: Stack(
         children: [
           Image.asset(

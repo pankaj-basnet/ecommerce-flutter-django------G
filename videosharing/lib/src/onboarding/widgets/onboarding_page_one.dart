@@ -16,6 +16,9 @@ class OnboardingScreenOne extends StatelessWidget {
       height: ScreenUtil().screenHeight,
       child: Stack(
         children: [
+          SizedBox(
+              height: 20.h,
+            ),
           Image.asset(
             R.ASSETS_IMAGES_EXPERIENCE3_JPEG,
             fit: BoxFit.cover,

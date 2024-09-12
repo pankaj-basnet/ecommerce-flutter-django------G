@@ -13,7 +13,7 @@ class Storage {
     return GetStorage().read(key);
   }
 
-  void SetBool(String key, bool value) {
+  void setBool(String key, bool value) {
     GetStorage().write(key, value);
   }
 

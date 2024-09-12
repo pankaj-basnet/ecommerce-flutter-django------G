@@ -249,7 +249,7 @@ instructor made his custom shortcut --- """"Provider.of<MyType>(context)"""" ---
 
 
 final pro = Provider.of<OnboardingNotifier>(context);
-    return Scaffold(
+    return Scaffold (
       body: Consumer<OnboardingNotifier>(
         builder: (context, onboardingNotifier, child) {
           return Column(
@@ -286,8 +286,8 @@ if needed , use all three ways to use provider to make code cleaner {isn=}
 
 =================================================================================
 
-these code deleted ---- lib\src\onboarding\views\onboarding_page.dart
-these code deleted ---- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\onboarding\views\onboarding_page.dart
+these code deleted ---- lib\src\onboarding\views\onboarding_screen.dart --- ( onboarding_page.dart
+these code deleted ---- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\onboarding\views\onboarding_screen.dart --- (onboarding_page.dart
 
 <!-- 
 class OnBoardingScreen extends StatelessWidget {
@@ -376,117 +376,123 @@ class AppText{
 <!-- time 2hr 01 min -->
 <!-- time 2hr 01 min -->
 <!-- time 2hr 01 min -->
-<!-- time 2hr 01 min -->
-<!-- time 2hr 01 min -->
-<!-- time 2hr 01 min -->
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-notes note made after this
-<!-- time 2hr 03 min 45 sec -->
 
-time 2hr 31min --- created lib/src/profile/views/profile_screen.dart
-time 2hr 40min --- working on entrypoint.dart
-time 3hr 06min --- working on home_screen.dart
-D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\z----v-v-sh-notes--0011-------.md
 =================================================================================
 
-
-
+time 2hr01m30s
+file name changed to "splashscreen_screen.dart" from splashscreen_page.dart
 
 
 =================================================================================
 
 
+(((con=))) setting page number for pages of OnBoardingScreen--- set setSelectedPage(int page) { ---- context.read<OnboardingNotifier>().setSelectedPage = page; --- OnboardingScreenOne(),---OnboardingScreenTwo(),---WelcomeScreen() -----""setSelectedPage = page"" done instead of function parameter page --- why?? {{sn=}}
+
+D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\onboarding\views\onboarding_screen.dart
+before time 2hr13min57s ---- Icon ( AntDesign.rightcircleo, color: Kolors.kPrimary, size: 20, // overflow error )
+
+=================================================================================
+
+"index" used instead of "page" ----  _pageController.animateToPage(page, duration: duration, curve: curve) ----  _pageController.animateToPage(index, duration: duration, curve: curve)
 
 
 
 =================================================================================
 
-
-
-
-
-=================================================================================
-
-
+time 2hr20min56s
+making _pageController animate to " selectedPage +1 " ---- GestureDetector(onTap: () {_pageController.animateToPage(context.read<OnboardingNotifier>().selectedPage +1,duration: const Duration(milliseconds: 200),curve: Curves.easeIn);
 
 
 
 =================================================================================
 
+isn= widget/reusable_text.dart ---- time 2hr22min29s
 
 
 
+-------------------------------------
+summary of src\onboarding\views\onboarding_screen.dart --- until 2hr30min {{sn= 2hr24min still no complete}}
 
+-------------------------------------
+scaffold --> (stack --> (children  --> [ PageView , Container] ) ) --- -- {{sn=}}
+
+-------------------------------------
+<!-- summary of process -->
+--- put children in stack (step-1)
+children: const [ OnboardingScreenOne(), OnboardingScreenTwo(), WelcomeScreen()],
+--- put icons at the bottom (step-2)
+GestureDetector( onTap: () {}, child: Icon(  ++++   SizedBox(   ++++   GestureDetector( 
+--- at third page -- WelcomeScreen , Container with Row should shrink(step-3)
+--- at first page -- WelcomeScreen , "left icon" should disappear(step-3)
+
+-------------------------------------
 =================================================================================
-
 
 
 
 
 =================================================================================
 
+time 2hr28min09s
+create lib\src\auth\views\login_screen.dart ---- class LoginPage 
+create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\auth\views\login_screen.dart
 
+
+time 2hr31m
+create lib\src\profile
+create lib\src\profile\views
+create lib\src\profile\views\profile_screen.dart
+create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\profile\views\profile_screen.dart
+=================================================================================
+
+create lib\src\cart\views\cart_screen.dart
+create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\cart\views\cart_screen.dart
+
+=================================================================================
+
+create lib\src\wishlist\views\wishlist_screen.dart
+create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\wishlist\views\wishlist_screen.dart
+
+
+
+=================================================================================
+
+Scaffold(
+      body: Stack(
+        children: [
+          // pageList[1],   // <-------- does not work for Wishlist, only works for homepage -- List<Widget> pageList 
+          pageList[0],
+
+
+
+=================================================================================
+
+time 2hr52m43s
+create lib\src\entrypoint\controllers\bottom_tab_notifier.dart
+<!-- create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\entrypoint\controllers\bottom_tab_notifier.dart -->
+
+
+
+=================================================================================
+
+time 2hr59min35s
+added this code  ----->  Consumer<TabIndexNotifier>( builder: (context, tabIndexNotifier, child) { return 
 
 
 
 =================================================================================
 
 
-
-
-
-=================================================================================
-
-
-
-
+added -----> 
+added -----> 
+added -----> 
+added -----> onTap: (i) { print(i); tabIndexNotifier.setIndex(i);  },
+added -----> currentIndex: tabIndexNotifier.index,
 
 =================================================================================
 
 
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
+ Badge( label: Text('9'), child: const Icon
 
 
 =================================================================================
