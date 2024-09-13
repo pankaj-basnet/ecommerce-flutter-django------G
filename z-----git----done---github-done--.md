@@ -1,7 +1,7 @@
 ======================================================================
 
-ecommerce-flutter-django---G
-https://github.com/pankaj-basnet/ecommerce-flutter-django---G
+ecommerce-flutter-django------G
+https://github.com/pankaj-basnet/ecommerce-flutter-django------G
 
 
 ======================================================================

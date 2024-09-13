@@ -12,7 +12,6 @@ import 'package:provider/provider.dart';
 
 //     =====       time     =====       38 min 32 sec
 
-
 Future<dynamic> logoutBottomSheet(BuildContext context) {
   return showModalBottomSheet(
     context: context,
@@ -54,7 +53,7 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GradientBtn(
+                  CustomButton(
                     text: "Cancel",
                     borderColor: Kolors.kDark,
                     btnColor: Kolors.kWhite,
@@ -63,7 +62,7 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
                     radius: 16,
                     btnWidth: ScreenUtil().screenWidth / 2.2,
                   ),
-                  GradientBtn(
+                  CustomButton(
                     text: "Yes, Logout",
                     onTap: () {
                       // Storage().removeKey('accessToken');

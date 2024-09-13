@@ -12,6 +12,7 @@ import 'package:videosharing/common/utils/app_routes.dart';
 import 'package:videosharing/common/utils/environment.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:videosharing/common/utils/kstrings.dart';
+import 'package:videosharing/src/categories/controllers/category_notifier.dart';
 import 'package:videosharing/src/entrypoint/controllers/bottom_tab_notifier.dart';
 import 'package:videosharing/src/onboarding/controllers/onboarding_notifier.dart';
 import 'package:videosharing/src/splashscreen/views/splashscreen_screen.dart';
@@ -26,7 +27,8 @@ void main() async {
 
     runApp(MultiProvider(providers: [
       ChangeNotifierProvider(create: (_) => OnboardingNotifier()),
-      ChangeNotifierProvider(create: (_) => TabIndexNotifier())
+      ChangeNotifierProvider(create: (_) => TabIndexNotifier()),
+      ChangeNotifierProvider(create: (_) => CategoryNotifier()),
     ],
     child: const MyApp(),));
 }

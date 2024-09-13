@@ -6,8 +6,8 @@ import 'package:path/path.dart';
 import 'package:videosharing/common/utils/kcolors.dart';
 import 'package:videosharing/common/widgets/app_style.dart';
 
-class GradientBtn extends StatelessWidget {
-  const GradientBtn({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     super.key,
     this.onTap,
     this.btnWidth,

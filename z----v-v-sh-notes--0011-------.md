@@ -497,6 +497,45 @@ added -----> currentIndex: tabIndexNotifier.index,
 
 =================================================================================
 
+create lib\src\home\widgets\notifications_widget.dart
+create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\home\widgets\notifications_widget.dart
+
+
+
+=================================================================================
+
+time 3hr20min
+
+create lib\src\notification\views\notification_screen.dart
+create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\notification\views\notification_screen.dart
+
+
+""RenderFlex overflowed by 4.0 pixels on the right"" removed --- after making "notifications" icon smaller ---- padding: EdgeInsets.only(   // right: 12.w,   right: 8.w, ), child: CircleAvatar(
+
+
+=================================================================================
+
+time 3hr38m02s
+create lib\src\search\views\search_screen.dart
+create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\search\views\search_screen.dart
+
+
+
+=================================================================================
+
+D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\common\utils\app_routes.dart
+
+
+
+=================================================================================
+
+
+code incomplete in lib\const\constants.dart
+
+
+=================================================================================
+time 3hr49m30s
+code incomplete in lib\const\constants.dart
 
 
 
@@ -504,111 +543,139 @@ added -----> currentIndex: tabIndexNotifier.index,
 =================================================================================
 
 
+create lib\src\home\widgets\home_slider.dart
+class HomeSlider 
 
 
+=================================================================================
+
+rename "GradientBtn" to "CustomButton"
+
+D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\common\widgets\custom_button.dart
+
+=================================================================================
+
+time 4hr11m55s
+create lib\src\home\widgets\home_header.dart
+
+
+
+=================================================================================
+
+create lib\src\categories
+create lib\src\categories\views\
+create lib\src\categories\views\categories_screen.dart
+
+
+
+=================================================================================
+
+{{mb= jason data}} data for ""constants.dart"" copied from postman ----> List<Categories> cat = [
+on postman --- GET request done ----> url ---> "http://127.0.0.1:8000/api/products/categories/home"
+
+
+=================================================================================
+
+quicktype.io
+
+
+temporary solution ----  List<Categories> cat = [ ---- will be deleted later isn=
+=================================================================================
+
+time 4hr36m39s
+use ChatGPT to create "Categories" objects --- check contants.dart
+
+
+
+=================================================================================
+
+List<Categories> categories = [     ---  contants.dart
+
+
+
+=================================================================================
+
+create lib\src\home\widgets\categories_list.dart
+
+import 'package:flutter_svg/svg.dart'; ----- lib\src\categories\views\categories_screen.dart
+
+
+=================================================================================
+time 4hr43min49s
+
+
+ // "https://github.com/pankaj-basnet/flutter--thrift--pics/blob/main/artificial-photography-vB5qtt8X4NA-unsplash.jpg",
+  // "https://github.com/pankaj-basnet/flutter--thrift--pics/blob/main/cristofer-maximilian-AqLIkOzWDAk-unsplash.jpg",
+  // "https://github.com/pankaj-basnet/flutter--thrift--pics/blob/main/5.-POCOOpening.jpeg",
 
 =================================================================================
 
 
 
 
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
+List<Categories> categories = [
+  Categories(
+      title: "Pants",
+      id: 1,
+      // imageUrl: "https://m.media-amazon.com/images/I/81CW6tC3XjL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+      imageUrl:
+          "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
+      // "images/a-placeholder.jpg"
+      // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FT0zEHBnRoAm3Z8vii7UTqu2ZtDnJIvtrQ&s"
+      ),
+  Categories(
+      title: "T-Shirts",
+      id: 5,
+      imageUrl:
+          "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
+      // "images/a-placeholder.jpg"
+      // "https://m.media-amazon.com/images/I/51ulmT3YUZL._AC_SX522_.jpg"
+      // ),
+      // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnvKIV4blz56_pTUdc61Xc0ZEF3lGm_hjJGA&s"
+      ),
+  Categories(
+      title: "Sneakers",
+      id: 3,
+      imageUrl:
+          "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
+      // "images/a-placeholder.jpg"
+      // "https://m.media-amazon.com/images/I/41Jhn7-62eL._AC_SY695_.jpg"
+      ),
+  Categories(
+      title: "Dresses",
+      id: 2,
+      imageUrl:
+          "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
+      // "images/a-placeholder.jpg"
+      // "https://m.media-amazon.com/images/I/71Wm1P0x8AL._AC_SX569_.jpg"
+      ),
+  Categories(
+      title: "Jackets",
+      id: 4,
+      imageUrl:
+          "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
+      // "images/a-placeholder.jpg"
+      // "https://m.media-amazon.com/images/I/61o+IG4jWhL._AC_SX569_.jpg"
+      ),
+];
 
 
 =================================================================================
-
-
-
-
-
-=================================================================================
-
+time 4hr46min53s
+created lib\src\categories\views\category_page.dart
+created D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\views\category_page.dart
 
 
 
 
 =================================================================================
+time 4hr-48min-27s
+create lib\src\categories\controllers\category_notifier.dart
+create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\controllers\category_notifier.dart
 
 
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
+create videosharing\lib\src\categories\views\category_page.dart
+create videosharing\lib\common\utils\app_routes.dart
 =================================================================================
 
 

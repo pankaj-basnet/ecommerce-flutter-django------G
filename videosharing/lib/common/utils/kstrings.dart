@@ -1,4 +1,4 @@
-class AppText{
+class AppText {
   static const String kGetStarted = "Let's Get Started";
   static const String kCategory = 'Category';
   static const String kAppName = 'Fashion App';
@@ -6,13 +6,16 @@ class AppText{
   static const String kNotifications = 'Notifications';
   static const String kAddresses = 'Addresses';
   static const String kAddShipping = 'Add Shipping Address';
-  static const String kErrorLogin = 'Opps! Unable to log in with provided credentials.';
+  static const String kErrorLogin =
+      'Opps! Unable to log in with provided credentials.';
   static const String kErrorGetUser = 'Opps! Unable to get user data';
   static const String kVerify = 'Verification Code';
-  static const String kVerifyText = 'Please enter the code we just sent to email';
+  static const String kVerifyText =
+      'Please enter the code we just sent to email';
   static const String kSearch = 'Search';
 
-  static const String kProfilePic = 'https://d326fntlu7tble.cloudfront.net/uploads/08566 ...';
+  static const String kProfilePic =
+      'https://d326fntlu7tble.cloudfront.net/uploads/08566 ...';
 
   static const String kCollection = 'New Collection';
   static const String kPolicy = 'Privacy Policy';
@@ -43,12 +46,20 @@ class AppText{
   static const String kCheckoutAddress = 'Change Checkout Address';
   static const String kCheckoutAddressText = 'Click to Select Address';
   static const String kLogoutText = 'Are you sure you want to logout?';
-  static const String kLoginText = 'To procedd please login into your account or register';
-  static const String kAppTerms = 'Our comprehensive Terms & Conditions document serves as...';
-  static const String kAppCancelationPolicy = 'We understant that shopping plans can change';
-  static const String kWelcomeHeader = 'The Fashion App That \nMakes You Look Your Best';
-  static const String kWelcomeMessage = 'Welcome to fashion app! Discover trends, shop favorite styles, and elevate your ward...';
-  static const String kOnboardWishList = 'Wishlist: Where Fashion \nDream Begin';
-  static const String kOnboardWishListMessage = "Your Wishlist awaits! Curate your dream looks and save favourites for later. It's the ...";
-  static const String kOnboardHome = 'Welcome to the ultimate fashion destination! Discover trends, shop your favorite style ...';
+  static const String kLoginText =
+      'To proceed, please login into your account or register';
+  static const String kAppTerms =
+      'Our comprehensive Terms & Conditions document serves as...';
+  static const String kAppCancelationPolicy =
+      'We understant that shopping plans can change';
+  static const String kWelcomeHeader =
+      'The Fashion App That \nMakes You Look Your Best';
+  static const String kWelcomeMessage =
+      'Welcome to fashion app! Discover trends, shop favorite styles, and elevate your ward...';
+  static const String kOnboardWishList =
+      'Wishlist: Where Fashion \nDream Begin';
+  static const String kOnboardWishListMessage =
+      "Your Wishlist awaits! Curate your dream looks and save favourites for later. It's the ...";
+  static const String kOnboardHome =
+      'Welcome to the ultimate fashion destination! Discover trends, shop your favorite style ...';
 }

@@ -52,7 +52,6 @@ class AppEntryPoint extends StatelessWidget {
                       unselectedIconTheme:
                           const IconThemeData(color: Colors.black38),
                       onTap: (i) {
-                        print(i);
                         tabIndexNotifier.setIndex(i);
                       },
                       items: [
@@ -85,20 +84,20 @@ class AppEntryPoint extends StatelessWidget {
                             icon: tabIndexNotifier.index == 2
                                 ? const Badge(
                                     label: Text('9'),
-                                    child:  Icon(
+                                    child: Icon(
                                       MaterialCommunityIcons.shopping,
                                       color: Kolors.kPrimary,
                                       size: 24,
                                     ),
                                   )
                                 : const Badge(
-                                  label: Text('9'),
-                                  child:  Icon(
+                                    label: Text('9'),
+                                    child: Icon(
                                       MaterialCommunityIcons.shopping_outline,
                                       // color: Kolors.kPrimary,
                                       // size: 24,
                                     ),
-                                ),
+                                  ),
                             label: "Cart"),
                         BottomNavigationBarItem(
                             icon: tabIndexNotifier.index == 3
