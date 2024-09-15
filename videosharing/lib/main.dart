@@ -14,6 +14,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:videosharing/common/utils/kstrings.dart';
 import 'package:videosharing/src/categories/controllers/category_notifier.dart';
 import 'package:videosharing/src/entrypoint/controllers/bottom_tab_notifier.dart';
+import 'package:videosharing/src/home/controllers/home_tab_notifier.dart';
 import 'package:videosharing/src/onboarding/controllers/onboarding_notifier.dart';
 import 'package:videosharing/src/splashscreen/views/splashscreen_screen.dart';
 
@@ -29,6 +30,7 @@ void main() async {
       ChangeNotifierProvider(create: (_) => OnboardingNotifier()),
       ChangeNotifierProvider(create: (_) => TabIndexNotifier()),
       ChangeNotifierProvider(create: (_) => CategoryNotifier()),
+      ChangeNotifierProvider(create: (_) => HomeTabNotifier()),
     ],
     child: const MyApp(),));
 }

@@ -100,7 +100,7 @@ class HomeSlider extends StatelessWidget {
 
 List<String> images = [
   // "https://unsplash.com/photos/coffee-in-gray-ceramic-mug-beside-blue-jeans-1VOtJMtghZ0",
- 
+
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY337taNjiPZPeruMu83HQd4-TvpcpDV-9iA&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqvBrKVc0CI_wbGykF64-ApAqtuMsqFAg5JA&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5QG8DZWBDWc4NiY79bg6-4zdPTwTikBAaRQ&s",
@@ -122,8 +122,8 @@ List<String> images = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY337taNjiPZPeruMu83HQd4-TvpcpDV-9iA&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqvBrKVc0CI_wbGykF64-ApAqtuMsqFAg5JA&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5QG8DZWBDWc4NiY79bg6-4zdPTwTikBAaRQ&s",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoJNjM_x-YoEgoWJDKALfyV9yg8pyd8aMrVg&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9HrU2Xgu9bONeP5HE8vOQatTgpUviURxk4g&s",
 
   "https://github.com/pankaj-basnet/flutter--thrift--pics/blob/main/rocknwool-1VOtJMtghZ0-unsplash.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoJNjM_x-YoEgoWJDKALfyV9yg8pyd8aMrVg&s",
 ];

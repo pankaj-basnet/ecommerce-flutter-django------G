@@ -678,82 +678,270 @@ create videosharing\lib\src\categories\views\category_page.dart
 create videosharing\lib\common\utils\app_routes.dart
 =================================================================================
 
+time 5hr07m05s
+convert  HomePage to "StatefullWidget" ---- class HomePage extends StatelessWidget {
 
 
 
 
 =================================================================================
 
+time 5hr11min14s
+create lib\src\home\controllers\home_tab_notifier.dart
+
+
+=================================================================================
+
+practice done --- sn= ---  ClipRRect used --- circular image --- CircleAvatar( backgroundColor: Kolors.kSecondaryLight, child: Padding(   padding: EdgeInsets.all(4.h),   child: ClipRRect(     borderRadius: BorderRadius.circular(50),     child: Image.network(       category.imageUrl,       width: 40.w,       height: 40.h,     ),   ),),),
+
+
+
+=================================================================================
+
+<!-- time 5hr22min41s --> ""dispose()"" completed
+
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  late final TabController _tabController;
+
+  int _currentTabIndex = 0;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: homeTabs.length, vsync: this);
+
+    _tabController.addListener(_handleSelection);
+    super.initState();
+  }
+
+  void _handleSelection() {
+    // setState(() => _currentTabIndex = _tabController.index); // not preferred way of isn=
+    final controller = Provider.of<HomeTabNotifier>(context, listen: false);
+
+    setState(() {
+      _currentTabIndex = _tabController.index;
+      controller.setIndex(homeTabs[_currentTabIndex]);
+    });
+  }
+
+  @override
+  void dispose() {
+    _tabController.removeListener(_handleSelection);
+    _tabController.dispose();
+
+    super.dispose();
+  }
+
+
+
+=================================================================================
+<!-- time 5hr23min19sec -->
+create lib\src\home\widgets\home_tabs.dart
+
+
+add code to lib\common\widgets\tab_widget.dart
+
+
+=================================================================================
+
+<!-- lib\src\home\views\home_screen.dart -->
+index of _tabController is automatic ---   ""  _tabController = TabController(length: homeTabs.length, vsync: this);  "" ---lib\src\home\views\home_screen.dart {{sn=}}
+
 
 
 
 
 =================================================================================
 
+<!-- time 5hr-39min-21sec -->
+create lib\src\products\models\products_model.dart
+
+copy paste "model" code from quicktype.io
 
 
+=================================================================================
+
+pasted to quicktime.io ---- to make product model
+
+[
+  {
+    "id": 3,
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.0,
+    "description": "The Classic Chuck Taylor All Star Sneaker from Converse, featuring a timeless design and comfort ooo...",
+    "is_featured": true,
+    "clothesType": "kids",
+    "ratings": 4.333333333333333,
+    "colors": ["black", "white", "red"],
+    "imageUrls": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCaCN_ZPB9T0GUjDqNGz_o3NYA2UgL1GvoA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCaCN_ZPB9T0GUjDqNGz_o3NYA2UgL1GvoA&s"
+    ],
+    "sizes": ["7", "8", "9", "10", "11"],
+    "created_at": "2024-06-06T07:57:45Z",
+    "category": 3,
+    "brand": 1
+  },
+  {
+    "id": 1,
+    "title": "LV Trainers",
+    "price": 798.88,
+    "description": "LV Trainers blend sleek style with athletic functionality, featuring bold logos, premium material ooo...",
+    "is_featured": true,
+    "clothesType": "women",
+    "ratings": 4.5,
+    "colors": ["white", 
+    "black", 
+    "red"],
+    "imageUrls": [
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCaCN_ZPB9T0GUjDqNGz_o3NYA2UgL1GvoA&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCaCN_ZPB9T0GUjDqNGz_o3NYA2UgL1GvoA&s"
+
+    ],
+    "sizes": ["7", "8", "9", "10", "11"],
+    "created_at": "2024-06-06T07:49:15Z",
+    "category": 3,
+    "brand": 1
+  },
+  {
+    "id": 2,
+    "title": "Adidas Ultraboost",
+    "price": 180.0,
+    "description": "experience the comfort and energy return of the Ultraboost, designed for running ooo...",
+    "is_featured": true,
+    "clothesType": "unisex",
+    "ratings": 5.0,
+    "colors": ["navy", "grey", "blue"],
+    "imageUrls": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCaCN_ZPB9T0GUjDqNGz_o3NYA2UgL1GvoA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCaCN_ZPB9T0GUjDqNGz_o3NYA2UgL1GvoA&s"
+
+    ],
+    "sizes": [
+      "7", 
+      "8", 
+      "9",
+       "10", 
+      "11"],
+    "created_at": "2024-06-06T07:55:20Z",
+    "category": 3,
+    "brand": 1
+  }
+]
+
+
+=================================================================================
+
+result code from quicktype.io ------- null safety --> on, make all properties required --> , make all properties final --> 
+
+-------------------------------------
+// To parse this JSON data, do
+//
+//     final products = productsFromJson(jsonString);
+
+import 'package:meta/meta.dart';
+import 'dart:convert';
+
+List<Products> productsFromJson(String str) => List<Products>.from(json.decode(str).map((x) => Products.fromJson(x)));
+
+String productsToJson(List<Products> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
+class Products {
+    final int id;
+    final String title;
+    final double price;
+    final String description;
+    final bool isFeatured;
+    final String clothesType;
+    final double ratings;
+    final List<String> colors;
+    final List<String> imageUrls;
+    final List<String> sizes;
+    final DateTime createdAt;
+    final int category;
+    final int brand;
+
+    Products({
+        required this.id,
+        required this.title,
+        required this.price,
+        required this.description,
+        required this.isFeatured,
+        required this.clothesType,
+        required this.ratings,
+        required this.colors,
+        required this.imageUrls,
+        required this.sizes,
+        required this.createdAt,
+        required this.category,
+        required this.brand,
+    });
+
+    factory Products.fromJson(Map<String, dynamic> json) => Products(
+        id: json["id"],
+        title: json["title"],
+        price: json["price"]?.toDouble(),
+        description: json["description"],
+        isFeatured: json["is_featured"],
+        clothesType: json["clothesType"],
+        ratings: json["ratings"]?.toDouble(),
+        colors: List<String>.from(json["colors"].map((x) => x)),
+        imageUrls: List<String>.from(json["imageUrls"].map((x) => x)),
+        sizes: List<String>.from(json["sizes"].map((x) => x)),
+        createdAt: DateTime.parse(json["created_at"]),
+        category: json["category"],
+        brand: json["brand"],
+    );
+
+    Map<String, dynamic> toJson() => {
+        "id": id,
+        "title": title,
+        "price": price,
+        "description": description,
+        "is_featured": isFeatured,
+        "clothesType": clothesType,
+        "ratings": ratings,
+        "colors": List<dynamic>.from(colors.map((x) => x)),
+        "imageUrls": List<dynamic>.from(imageUrls.map((x) => x)),
+        "sizes": List<dynamic>.from(sizes.map((x) => x)),
+        "created_at": createdAt.toIso8601String(),
+        "category": category,
+        "brand": brand,
+    };
+}
+
+-------------------------------------
 
 
 =================================================================================
 
 
+ChatGPT not used to create "Products" model list  --- done manually
+
+
+List<Products> products = [ Products(  ----- lib\const\constants.dart
 
 
 
 =================================================================================
 
-
-
-
-
-=================================================================================
-
-
+create lib\src\products\widgets\staggered_tile_widget.dart
 
 
 
 =================================================================================
 
+<!-- lib\src\wishlist\views\wishlist_screen.dart -->
 
-
-
-
-=================================================================================
-
-
-
+create lib\src\products\views\product_screen.dart
 
 
 =================================================================================
 
+<!-- time 6 hr 17 min 25 s -->
+create lib\src\products\controllers\product_notifier.dart
 
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
-=================================================================================
-
-
-
-
-
+<!-- COMMIT DONE           ============= -->
+<!-- ProductPage GOING ON -->
 =================================================================================
 
 

@@ -30,6 +30,7 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
           SizedBox(
+            // height: 2.h,
             height: 5.h,
           ),
           Row(
@@ -62,15 +63,18 @@ class CustomAppBar extends StatelessWidget {
       ),
       actions: const [NotificationWidget()],
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(55.h),
+        preferredSize: Size.fromHeight(38.h),
+        // preferredSize: Size.fromHeight(55.h),
         child: GestureDetector(
           onTap: () {
             context.push('/search');
           },
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12.h, vertical: 8.h),
-            // padding: EdgeInsets.symmetric(horizontal: 5.h, vertical: 5.h),
+            // padding: EdgeInsets.only(left: 5.w, right: 5.w), // mb= sn= doesnot make "less space"
+            // padding: EdgeInsets.symmetric(horizontal: 5.h, vertical: 5.h), // mb= sn=
             // padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.symmetric(
+                horizontal: 12.h, vertical: 4.h), // mb= isn=
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -88,7 +92,9 @@ class CustomAppBar extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(12)),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 1), // sn=
+                      // padding: const EdgeInsets.all(8.0), // isn=
                       child: Row(
                         children: [
                           const Icon(

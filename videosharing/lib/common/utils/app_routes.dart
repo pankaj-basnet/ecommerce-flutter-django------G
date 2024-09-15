@@ -5,6 +5,7 @@ import 'package:videosharing/src/categories/views/category_page.dart';
 import 'package:videosharing/src/entrypoint/views/entrypoint.dart';
 import 'package:videosharing/src/notification/views/notification_screen.dart';
 import 'package:videosharing/src/onboarding/views/onboarding_screen.dart';
+import 'package:videosharing/src/products/views/product_screen.dart';
 import 'package:videosharing/src/search/views/search_screen.dart';
 import 'package:videosharing/src/splashscreen/views/splashscreen_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -79,6 +80,21 @@ final GoRouter _router =
   //   path: '/checkout',
   //   builder: (context, state) => const xxxxxxxxxxxx(),
   // ),
+  // GoRoute(
+  //   path: '/successful',
+  //   builder: (context, state) => const SuccessfulPayment(),
+  // ),
+  // GoRoute(
+  //   path: '/failed',
+  //   builder: (context, state) => const FailedPayment(),
+  // ),
+  GoRoute(
+    path: '/product/:id',
+    builder: (BuildContext context, GoRouterState state) {
+      final productId = state.pathParameters['id'];
+      return ProductPage(productId: productId.toString());
+    }
+  ),
 ]);
 
 GoRouter get router => _router;
