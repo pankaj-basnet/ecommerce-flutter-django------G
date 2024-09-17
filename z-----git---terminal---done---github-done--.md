@@ -299,7 +299,19 @@ Starting device daemon...
 % =========================================================================================
 % =========================================================================================
 
-
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech-- (main)
+$ git commit -am "----------------  time 6hr17m25s  ---------------- home page done -- wishlist little done -- ProductPage started -- ................................................................................"
+[main e6b32cb] ----------------  time 6hr17m25s  ---------------- home page done -- wishlist little done -- ProductPage started -- ................................................................................
+ 21 files changed, 1275 insertions(+), 234 deletions(-)
+ create mode 100644 videosharing/lib/src/home/controllers/home_tab_notifier.dart
+ create mode 100644 videosharing/lib/src/home/widgets/home_tabs.dart
+ create mode 100644 videosharing/lib/src/products/controllers/product_notifier.dart
+ create mode 100644 videosharing/lib/src/products/models/products_model.dart
+ create mode 100644 videosharing/lib/src/products/views/product_screen.dart
+ create mode 100644 videosharing/lib/src/products/widgets/explore_products.dart
+ create mode 100644 videosharing/lib/src/products/widgets/staggered_tile_widget.dart
+ delete mode 100644 z-----git----done---github-done--.md
+ create mode 100644 z-----git---terminal---done---github-done--.md
 
 % =========================================================================================
 % =========================================================================================

@@ -16,6 +16,7 @@ import 'package:videosharing/src/categories/controllers/category_notifier.dart';
 import 'package:videosharing/src/entrypoint/controllers/bottom_tab_notifier.dart';
 import 'package:videosharing/src/home/controllers/home_tab_notifier.dart';
 import 'package:videosharing/src/onboarding/controllers/onboarding_notifier.dart';
+import 'package:videosharing/src/products/controllers/product_notifier.dart';
 import 'package:videosharing/src/splashscreen/views/splashscreen_screen.dart';
 
 void main() async {
@@ -26,13 +27,16 @@ void main() async {
 
   await GetStorage.init();
 
-    runApp(MultiProvider(providers: [
+  runApp(MultiProvider(
+    providers: [
       ChangeNotifierProvider(create: (_) => OnboardingNotifier()),
       ChangeNotifierProvider(create: (_) => TabIndexNotifier()),
       ChangeNotifierProvider(create: (_) => CategoryNotifier()),
       ChangeNotifierProvider(create: (_) => HomeTabNotifier()),
+      ChangeNotifierProvider(create: (_) => ProductNotifier()),
     ],
-    child: const MyApp(),));
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -43,7 +47,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return ScreenUtilInit(
-      
         designSize: screenSize,
         minTextAdapt: true,
         splitScreenMode: false,
@@ -63,7 +66,7 @@ class MyApp extends StatelessWidget {
           );
         },
         child: const SplashScreen());
-        // child: const MyHomePage(title: 'Flutter Demo Home Page'));
+    // child: const MyHomePage(title: 'Flutter Demo Home Page'));
   }
 }
 

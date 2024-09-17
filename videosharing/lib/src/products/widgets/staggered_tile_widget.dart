@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:videosharing/common/services/storage.dart';
 import 'package:videosharing/common/utils/kcolors.dart';
 import 'package:videosharing/common/widgets/app_style.dart';
 import 'package:videosharing/common/widgets/reusable_text.dart';
+import 'package:videosharing/src/products/controllers/product_notifier.dart';
 import 'package:videosharing/src/products/models/products_model.dart';
 
 class StaggeredTileWidget extends StatelessWidget {
@@ -20,9 +23,12 @@ class StaggeredTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String? accessToken = Storage().getString('accessToken');
+    // String? accessToken = Storage().getString('accessToken');
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        context.read<ProductNotifier>().setProduct(product);
+        context.push('/product/${product.id}');
+      },
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: Container(

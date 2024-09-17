@@ -36,7 +36,7 @@
 //                 return null;
 //               }
 //             },
-//             style: appStyle(12, Kolors.kDark, FontWeight.normal),
+//             // style: appStyle(12, Kolors.kDark, FontWeight.normal), //isn= {{uncomment later sn=}}
 //             decoration: InputDecoration(
 //               suffixIcon: GestureDetector(
 //                 onTap: () {
@@ -58,7 +58,7 @@
 //               isDense: true,
 //               contentPadding: const EdgeInsets.all(6),
 
-//               hintStyle: appStyle(12, Kolors.kGray, FontWeight.normal),
+//               // hintStyle: appStyle(12, Kolors.kGray, FontWeight.normal), //isn= {{uncomment later sn=}}
 //               // contentPadding: const EdgeInsets.only(left: 24),
 //               errorBorder: OutlineInputBorder(
 //                   borderSide: const BorderSide(color: Colors.red, width: 0.5),

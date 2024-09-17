@@ -27,7 +27,7 @@ class HomeSlider extends StatelessWidget {
             child: ImageSlideshow(
               indicatorColor: Kolors.kPrimaryLight,
               onPageChanged: (p) {
-                print(p);
+                // print(p);
               },
               // autoPlayInterval: 5000, // autoplay pics slide sn=
               autoPlayInterval: 15000, // autoplay pics slide sn=

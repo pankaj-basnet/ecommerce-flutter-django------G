@@ -940,10 +940,539 @@ create lib\src\products\views\product_screen.dart
 <!-- time 6 hr 17 min 25 s -->
 create lib\src\products\controllers\product_notifier.dart
 
-<!-- COMMIT DONE           ============= -->
 <!-- ProductPage GOING ON -->
 =================================================================================
 
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech-- (main)
+$ git commit -am "----------------  time 6hr17m25s  ---------------- home page done -- wishlist little done -- ProductPage started -- ................................................................................"
+[main e6b32cb] ----------------  time 6hr17m25s  ---------------- home page done -- wishlist little done -- ProductPage started -- ................................................................................
+ 21 files changed, 1275 insertions(+), 234 deletions(-)
+ create mode 100644 videosharing/lib/src/home/controllers/home_tab_notifier.dart
+ create mode 100644 videosharing/lib/src/home/widgets/home_tabs.dart
+ create mode 100644 videosharing/lib/src/products/controllers/product_notifier.dart
+ create mode 100644 videosharing/lib/src/products/models/products_model.dart
+ create mode 100644 videosharing/lib/src/products/views/product_screen.dart
+ create mode 100644 videosharing/lib/src/products/widgets/explore_products.dart
+ create mode 100644 videosharing/lib/src/products/widgets/staggered_tile_widget.dart
+ delete mode 100644 z-----git----done---github-done--.md
+ create mode 100644 z-----git---terminal---done---github-done--.md
+
+
+
+=================================================================================
+
+time 6hr23m30s
+! ---> exclamation mark --- isn= ---- product! {{ product will always will present mb=}} {{ null check mb=}}
+
+
+
+=================================================================================
+
+
+
+--- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\products\views\product_screen.dart
+
+
+import '...:flutter_vector_icons
+
+
+% time 6hr29m46s
+copy ImageSlideShow( ) from home_slider.dart , paste to "product_screen.dart"
+
+
+
+=================================================================================
+
+% time 6hr30m20s
+it's nullable, so add ! (exclaimation mark) isn= {{to make non-nullable add ! ---- product! {{mb= sn=}}  }}
+
+
+import cached_network_image
+import constants.dart
+
+Consumer<ProductNotifier> ---- Scaffold( CustomScrollView .... ( .... SliverAppBar() ))
+Scaffold( CustomScrollView .... ( .... SliverAppBar() ))
+
+https://api.flutter.dev/flutter/material/SliverAppBar-class.html
+=================================================================================
+
+time 6hr33m47s ---- 
+error if Container () widget used
+
+
+SliverToBoxAdapter()
+
+https://api.flutter.dev/flutter/widgets/SliverToBoxAdapter-class.html
+lot of SliverToBoxAdapter() in page not efficient {{docs= }} --- as used by isn=
+
+=================================================================================
+
+product_screen.dart
+
+% time 6hr42m49s
+create lib\src\products\widgets\expandable_text.dart
+
+expandable_text.dart --- for "view more" functionality of description of Product Page
+class ExpandableText()  ---   lib\src\products\widgets\expandable_text.dart
+
+% coding in product_screen.dart 
+----- ExpandableText()  
+
+import expandable_text.dart
+
+=================================================================================
+
+% coding in product_notifier.dart
+
+% coding in  expandable_text.dart
+!context.watch<ProductNotifier>() ... --- "not" --- "!" operator --- exclaimation mark 
+
+https://api.flutter.dev/flutter/material/InkWell-class.html
+
+=================================================================================
+
+time 6hr51m55s
+error occurred while coding "InkWell" ---- may be related to maxlines of ExpandableText --- {{ will solve later in few minutes isn=}}
+
+time 6hr53m17s
+error occurred  -- solving error
+
+% coding in product_notifier.dart
+forget notifyListeners() in setDescription()
+
+=================================================================================
+time 6hr55m56s
+% coding in product_screen.dart 
+
+
+https://api.flutter.dev/flutter/material/Divider-class.html
+
+
+=================================================================================
+time 6hr57m22s
+Divider() widget
+
+
+% product_screen.dart 
+
+
+create lib\src\products\widgets\similar_products.dart
+copy code from explore_products.dart into similar_products.dart
+
+% coding in  similar_products.dart
+data is sent from backend in similar_products.dart ---- less code in frontend isn=
+
+
+=================================================================================
+
+time 07hr02m37s
+create lib\src\products\controllers\colors_sizes_notifier.dart --- colors_sizes_notifier.dart
+% coding in colors_sizes_notifier.dart
+
+
+% coding in similar_products.dart
+
+
+
+=================================================================================
+time 07hr07min05s
+create lib\src\products\widgets\product_sizes_widget.dart
+
+
+time 07hr09m55s
+null checker {{isn=}} ---- exclaimation mark "!" ----  product! --- (((  The property 'docs' can't be unconditionally accessed because the receiver can be 'null'.  ))) {{{ to declare value will never be null sn=}}}
+
+% coding in product_sizes_widget.dart
+
+=================================================================================
+
+% coding in main.dart
+import colors_sizes_notifier.dart
+
+% coding in product_screen.dart 
+
+
+
+=================================================================================
+
+time 07hr17m21s
+create lib\src\products\widgets\color_selection_widget.dart
+
+copy code from product_sizes_widget.dart to color_selection_widget.dart
+
+
+
+=================================================================================
+
+time 7hr24m16s
+create lib\src\products\widgets\product_bottom_bar.dart --- product_bottom_bar.dart
+
+% coding in product_screen.dart 
+
+% coding in product_bottom_bar.dart 
+
+
+
+=================================================================================
+
+time 7hr30m01s
+screenshot --- imports ---- product_screen.dart
+
+%  product_bottom_bar.dart 
+
+
+=================================================================================
+%  product_screen.dart
+time 7hr37m48s
+String? accessToken -----> is a nullable string {{isn=}} {{sn=}}
+
+time 7hr40m01s
+|| ---- "or" ---- bottomNavigationBar() ---- 
+
+showErrorPopup()
+
+=================================================================================
+
+time 7hr41m32s
+% kstrings.dart
+
+
+error_modal.dart --- time 7hr43m18s
+
+=================================================================================
+
+create lib\src\profile\widget\tile_widget.dart --- time 7hr45m32s
+
+% profile_screen.dart
+
+
+
+=================================================================================
+
+showHelpCenterBottomSheet(context) --- time 7hr58m22s
+
+
+
+
+=================================================================================
+
+time 8hr03m36s
+
+
+
+
+=================================================================================
+
+time 8hr04m27s
+kstrings.dart ---  proficepic url --- 'https://d326fntlu7tb1e.cloudfront.net/uploads/0856609b-21e8-4e73-85cb-1f9a93de81f4-avatar-png'
+
+instructor use profic pic with url 'https://firebasestorage.googleapis.com/v0/b/authentification-b4dc9-....'
+
+
+=================================================================================
+
+time 8hr06m52s
+create lib\src\profile\views\orders_screen.dart
+create lib\src\profile\views\policy_screen.dart
+create lib\src\profile\views\shipping_address_screen.dart
+
+
+coding in orders_screen.dart
+coding in policy_screen.dart
+coding in shipping_address_screen.dart
+
+% app_routes.dart
+
+% policy_screen.dart
+
+% profile_screen.dart
+
+
+coding in policy_screen.dart
+
+=================================================================================
+lib\src\auth\views\login_screen.dart
+% coding in login_screen.dart
+
+create lib\src\auth\views\registration_screen.dart
+
+create lib\src\auth\views\verification_screen.dart
+
+
+=================================================================================
+
+
+https://dart.dev/language/variables#late-variables 
+
+https://api.flutter.dev/flutter/widgets/FocusNode-class.html
+
+
+
+=================================================================================
+
+time 8hr22min46s
+% coding in profile_screen.dart
+
+% coding in login_screen.dart
+
+FocusScope.of(context).requestFocus
+
+time 8hr22min50s
+email_textfield.dart ----- already created by isn=
+
+already created lib\common\widgets\email_textfield.dart
+
+https://api.flutter.dev/flutter/services/TextInputType-class.html
+
+=================================================================================
+
+already created lib\common\widgets\password_field.dart
+
+create lib\src\auth\controllers\password_notifier.dart
+
+% coding in password_notifier.dart
+
+
+=================================================================================
+
+time 8hr33min19s
+% coding in main.dart
+
+
+% coding in login_screen.dart
+% coding in registration_screen.dart ------ copy paste login_screen.dart
+
+
+=================================================================================
+
+time 8hr43m00s
+% coding in  app_routes.dart
+
+
+% coding in login_screen.dart
+
+% coding in password_notifier.dart
+
+
+% =================================================================================
+
+# setting
+#
+
+
+
+
+=================================================================================
+
+#         =========       setting up a python environment       =========
+#         =========       setting up a python environment       =========
+#         =========       setting up a python environment       =========
+#         =========       setting up a python environment       =========
+#         =========       setting up a python environment       =========
+#         =========       setting up a python environment       =========
+#         =========       setting up a python environment       =========
+#         =========       setting up a python environment       =========
+#         =========       setting up a python environment       =========
+time 8hr47m48s
+
+
+
+=================================================================================
+
+https://djoser.readthedocs.io/en/latest/getting_started.html
+
+create lib\src\auth\models\login_model.dart
+copy and pasted code from quicktype.io in login_model.dart {{done by sn=}}
+
+=================================================================================
+
+some notes written in backend --- ecommerce-flutter-django-dbestech--backend\dj24\z------notes-----v-v-v-sh---.md
+some notes written in backend --- ecommerce-flutter-django-dbestech--backend\dj24\z------notes-----v-v-v-sh---.md
+some notes written in backend --- ecommerce-flutter-django-dbestech--backend\dj24\z------notes-----v-v-v-sh---.md
+some notes written in backend --- ecommerce-flutter-django-dbestech--backend\dj24\z------notes-----v-v-v-sh---.md
+some notes written in backend --- ecommerce-flutter-django-dbestech--backend\dj24\z------notes-----v-v-v-sh---.md
+time 09hr02m56s    == ======= === ==================python manage.py  migrate
+time 09hr02m56s    == ======= === ==================python manage.py  migrate
+time 09hr02m56s    == ======= === ==================python manage.py  migrate
+time 09hr02m56s    == ======= === ==================python manage.py  migrate
+time 09hr02m56s    == ======= === ==================python manage.py  migrate
+
+
+
+
+
+=================================================================================
+
+create lib\src\auth\models\auth_token_model.dart
+copy and pasted code from quicktype.io
+
+cfe
+cfe@gmail.com
+sncfeteam19#
+{
+    "auth_token": "sne08da07ae564ef647770dd6e664a5442d492b5bdisn"
+}
+
+% time09hr35m35s -------------------------
+create lib\src\auth\models\registration_model.dart
+copy and pasted code from quicktype.io
+
+{
+    "password": "",
+    "username": "",
+        "email": ""
+}
+=================================================================================
+
+create lib\src\auth\controllers\auth_notifier.dart
+
+% D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\.env.development
+API_BASE_URL = 'http://127.0.0.1:8000'
+
+
+=================================================================================
+
+flutter pub add http
+
+  ## ----- flutter pub add --- if packages installed, added here-
+
+  http: ^1.2.2
+
+% coding in  auth_notifier.dart -----------------
+
+=================================================================================
+
+% # time 9hr-53m-04s ------------------------
+
+use "ctx" variable name instead of "context" --- preferred by isn= --- loginFunc --- registrationFunc ------- auth_notifier.dart
+
+
+
+=================================================================================
+
+% coding in login_screen.dart =================
+
+https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html
+
+
+=================================================================================
+
+% coding in registration_screen.dart =================
+
+=================================================================================
+time 10hr-05m-10s
+login with wrong data after login_screen.dart and registration_screen.dart are done
+
+
+login done ---- sent to home page of flutter application --- time 10hr-07m-25s
+
+=================================================================================
+
+% coding in  auth_notifier.dart -----------------
+
+
+
+time 10hr-09m-00s
+delete "String data" parameter --- getUser(String data, BuildContext ctx) ---- because it is "GET" request ----- {{{  include "String data" parameter in both LoginFunc and RegistrationFunc sn=  }}}
+
+
+getUser(accessToken, ctx) ---- void LoginFunc
+
+
+important code ---- loginFunc ---- registrationFunc ---- getUser  {{{ sn= }}}
+
+% coding in profile_screen.dart
+logout ---- Storage().removeKey('accessToken) ---in profile_screen.dart
+=================================================================================
+
+TabIndexNotifier ----> src/entrypoint/controllers/bottom_tab_notifier.dart
+
+
+% coding in  auth_notifier.dart ----- getUser --- TabIndexNotifier ---'/home'
+
+remove ""  Storage().setString('accessToken', accessToken)  "" from loginFunc to getUser ---- time 10hr-21m-43s
+
+
+trying to get User after Login ---- error --- isn= {{{ error message not seen, after login, not getting user {{not going to home page mb=}}}}}
+=================================================================================
+
+
+
+
+
+
+=================================================================================
+
+time 10hr-23m-43s
+get user -----> using postman --- screenshot ----- send "Authorization" data  
+
+
+create lib\src\auth\models\profile_model.dart
+code copied from quicktype.io
+
+=================================================================================
+
+coding in auth_notifier.dart ---- setIndex(0)---- after login, goes to '/home'
+
+time 10hr-26m-20s --- imports ----  auth_notifier.dart ---- {{{important code sn=}}}
+ignore this warning --- ""Don't use 'BuildContext's across async gaps"" ---isn --- dart/flutter extension {{{  ignore 'use_build_context_synchronously' for the whole file }}}
+
+
+=================================================================================
+
+% coding in profile_screen.dart
+user!.email
+
+% coding in auth_notifier.dart ---- ctx.pop()
+
+=================================================================================
+
+error ----- coding in registration_screen.dart
+
+
+% coding in auth_notifier.dart ---- setRloading();
+
+% coding in registration_screen.dart  ---- uncomment ""context.read<AuthNotifier>""
+
+% coding in registration_screen.dart  ---- isRLoading
+
+% coding in auth_notifier.dart ---- setLoading(bool v)
+
+error removed---register (sign up) complete --- login successful ---- time 10hr-44m-51s
+=================================================================================
+
+time 10hr-45m-33s
+"return null" ---- dart extension suggestion ---- AgetUserData ---- auth_notifier.dart
+
+
+
+
+=================================================================================
+
+######      Creating First Django App     ========    time 10hr-45m-51s     ========
+######      Creating First Django App     ========    time 10hr-45m-51s     ========
+######      Creating First Django App     ========    time 10hr-45m-51s     ========
+######      Creating First Django App     ========    time 10hr-45m-51s     ========
+######      Creating First Django App     ========    time 10hr-45m-51s     ========
+######      Creating First Django App     ========    time 10hr-45m-51s     ========
+######      Creating First Django App     ========    time 10hr-45m-51s     ========
+######      Creating First Django App     ========    time 10hr-45m-51s     ========
+
+=================================================================================
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--backend/dj24/fashion_backend (main)
+$ python manage.py startapp core
+(venv-0915)
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--backend/dj24/fashion_backend (main)
+$ date
+Mon, Sep 16, 2024  1:50:38 PM
+
+
+
+
+=================================================================================
+
+create ecommerce-flutter-django-dbestech--backend\dj24\fashion_backend\core\urls.py
 
 
 
@@ -954,8 +1483,8 @@ create lib\src\products\controllers\product_notifier.dart
 
 
 
-=================================================================================
 
+=================================================================================
 
 
 
