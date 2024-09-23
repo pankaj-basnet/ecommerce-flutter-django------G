@@ -1127,7 +1127,7 @@ time 7hr37m48s
 String? accessToken -----> is a nullable string {{isn=}} {{sn=}}
 
 time 7hr40m01s
-|| ---- "or" ---- bottomNavigationBar() ---- 
+|| ---- "or" ---- bottomNavigationBar() ---- {{{ logic --- " logical or " }}}
 
 showErrorPopup()
 

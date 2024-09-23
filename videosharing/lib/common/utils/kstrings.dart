@@ -12,10 +12,14 @@ class AppText {
   static const String kVerify = 'Verification Code';
   static const String kVerifyText =
       'Please enter the code we just sent to email';
+  static const String kCartErrorText =
+      'Please select size and color to proceed';
+
   static const String kSearch = 'Search';
 
   static const String kProfilePic =
-      'https://d326fntlu7tble.cloudfront.net/uploads/08566 ...';
+      'https://m.media-amazon.com/images/I/61cR8rAaxJL.jpg';
+  // 'https://d326fntlu7tble.cloudfront.net/uploads/08566 ...'; //isn=
 
   static const String kCollection = 'New Collection';
   static const String kPolicy = 'Privacy Policy';
@@ -49,9 +53,15 @@ class AppText {
   static const String kLoginText =
       'To proceed, please login into your account or register';
   static const String kAppTerms =
-      'Our comprehensive Terms & Conditions document serves as...';
-  static const String kAppCancelationPolicy =
-      'We understant that shopping plans can change';
+      """You must have your receipt and valid government issued photo ID in order to return or exchange your product. 
+Information from your ID will be retained in a company-wide database to be used only for authorizing returns.Removal and Pick-up services at customers' homes vary by market. 
+If the Pick-up service is available in your area, please bring your product to your covered porch, garage or doorstep.
+What should I do if my item is damaged? If only one part from your product is damaged, we may be able to ship replacement parts from one of our stores. For the quickest resolution, we recommend visiting an IKEA store with the damaged product or part(s) along with your order confirmation or receipt. If you're unable to do so, please contact the IKEA US Customer Support Center at 1-888-888-4532. 
+""";
+  static const String kAppCancelationPolicy = """About Cancelling an Item: 
+      You can cancel items fulfilled by Amazon or shipped and sold by Amazon that have not entered the shipping process. 
+      If the item is sold and shipped by a third-party seller, orders can typically be canceled within one business day. 
+      """;
   static const String kWelcomeHeader =
       'The Fashion App That \nMakes You Look Your Best';
   static const String kWelcomeMessage =

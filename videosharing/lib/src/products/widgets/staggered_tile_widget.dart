@@ -7,6 +7,7 @@ import 'package:videosharing/common/services/storage.dart';
 import 'package:videosharing/common/utils/kcolors.dart';
 import 'package:videosharing/common/widgets/app_style.dart';
 import 'package:videosharing/common/widgets/reusable_text.dart';
+import 'package:videosharing/const/resource.dart';
 import 'package:videosharing/src/products/controllers/product_notifier.dart';
 import 'package:videosharing/src/products/models/products_model.dart';
 
@@ -36,34 +37,47 @@ class StaggeredTileWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: i % 2 == 0 ? 100.h : 120.h, // isn=
-                // height: i % 2 == 0 ? 163.h : 180.h, // isn=
-                color: Kolors.kPrimary,
-                child: Stack(
-                  children: [
-                    Image.network(product.imageUrls[0],
-                        height: i % 2 == 0 ? 100.h : 120.h, fit: BoxFit.cover),
-                    // height: i % 2 == 0 ? 120.h : 140.h, fit: BoxFit.cover), //sn=
-                    // height: i % 2 == 0 ? 163.h : 180.h, fit: BoxFit.cover,), //isn=
+              Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Container(
+                  // width: ScreenUtil().scaleWidth / 2 - 20, //sn= causes error
+                  height: 120.h, // isn=
+                  // height: i % 2 == 0 ? 100.h : 120.h, // isn=
+                  // height: i % 2 == 0 ? 163.h : 180.h, // isn=
+                  color: Kolors.kWhite,
+                  child: Stack(
+                    children: [
+                      // Image.asset(R.ASSETS_IMAGES_SHOES_1, fit: BoxFit.cover,),
+                      Image.network(product.imageUrls[0], // isn=
+                          height: 120.h,
+                          fit: BoxFit.fitWidth), //isn=
+                      // fit: BoxFit.fit), //isn=
 
-                    ///TODO: handle favorites
+                      // height: i % 2 == 0 ? 100.h : 120.h, fit: BoxFit.cover), //isn=
+                      // height: i % 2 == 0 ? 120.h : 140.h, fit: BoxFit.cover), //sn=
+                      // height: i % 2 == 0 ? 163.h : 180.h, fit: BoxFit.cover,), //isn=
 
-                    Positioned(
-                        right: 10.h,
-                        top: 10.h,
-                        child: GestureDetector(
-                          onTap: onTap,             // <------- "onTap" passed from "ExploreProducts() --- StaggeredTileWidget()"
-                          child: const CircleAvatar(
-                            backgroundColor: Kolors.kSecondaryLight,
-                            child: Icon(
-                              AntDesign.heart,
-                              color: Kolors.kRed,
-                              size: 18,
+                      ///TODO: handle favorites
+
+                      Positioned(
+                          right: 0.h,
+                          // right: 10.h, //isn=
+                          top: 0.h,
+                          // top: 10.h, //isn=
+                          child: GestureDetector(
+                            onTap:
+                                onTap, // <------- "onTap" passed from "ExploreProducts() --- StaggeredTileWidget()"
+                            child: const CircleAvatar(
+                              backgroundColor: Kolors.kSecondaryLight,
+                              child: Icon(
+                                AntDesign.heart,
+                                color: Kolors.kRed,
+                                size: 18,
+                              ),
                             ),
-                          ),
-                        ))
-                  ],
+                          ))
+                    ],
+                  ),
                 ),
               ),
               Padding(

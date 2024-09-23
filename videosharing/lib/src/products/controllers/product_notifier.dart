@@ -14,13 +14,12 @@ class ProductNotifier with ChangeNotifier {
 
   bool get description => _description;
 
-  void setDescription (){
+  void setDescription() {
     _description = !_description;
+    notifyListeners();
   }
 
-  void resetDescription(){
+  void resetDescription() {
     _description = false;
   }
-
-
 }

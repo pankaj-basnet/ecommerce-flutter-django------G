@@ -14,26 +14,27 @@ class OnboardingScreenOne extends StatelessWidget {
     return SizedBox(
       width: ScreenUtil().screenWidth,
       height: ScreenUtil().screenHeight,
-      child: Stack(
-        children: [
-          SizedBox(
-              height: 20.h,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 30.0),
+        child: Stack(
+          children: [
+            
+            Image.asset(
+              R.ASSETS_IMAGES_EXPERIENCE3_JPEG,
+              fit: BoxFit.cover,
             ),
-          Image.asset(
-            R.ASSETS_IMAGES_EXPERIENCE3_JPEG,
-            fit: BoxFit.cover,
-          ),
-          Positioned(
-            bottom: 120,
-            left: 30,
-            right: 30,
-            child: Text(
-              AppText.kOnboardHome,
-              textAlign: TextAlign.center,
-              // style: appStyle(11, Kolors.kGray, FontWeight.normal),
+            Positioned(
+              bottom: 120,
+              left: 30,
+              right: 30,
+              child: Text(
+                AppText.kOnboardHome,
+                textAlign: TextAlign.center,
+                // style: appStyle(11, Kolors.kGray, FontWeight.normal),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

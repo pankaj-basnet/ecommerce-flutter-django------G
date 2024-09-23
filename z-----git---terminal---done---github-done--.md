@@ -317,6 +317,37 @@ $ git commit -am "----------------  time 6hr17m25s  ---------------- home page d
 % =========================================================================================
 % =========================================================================================
 
+Tue, Sep 17, 2024  2:57:52 PM
+
+
+% 
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech-- (main)
+$ git commit -am "files created with no code ----needed until VIDEO-2---TIME 25min----V1-6hr50m--product page half done------------------------------------------------------------  time 6hr50s  ---------------- "
+[main c45560a] files created with no code ----needed until VIDEO-2---TIME 25min----V1-6hr50m--product page half done------------------------------------------------------------  time 6hr50s  ----------------
+ 35 files changed, 1330 insertions(+), 29 deletions(-)
+ create mode 100644 videosharing/lib/src/auth/controllers/auth_notifier.dart
+ create mode 100644 videosharing/lib/src/auth/models/auth_token_model.dart
+ create mode 100644 videosharing/lib/src/auth/models/login_model.dart
+ create mode 100644 videosharing/lib/src/auth/models/profile_model.dart
+ create mode 100644 videosharing/lib/src/auth/models/registration_model.dart
+ create mode 100644 videosharing/lib/src/auth/views/registration_screen.dart
+ create mode 100644 videosharing/lib/src/auth/views/verification_screen.dart
+ create mode 100644 videosharing/lib/src/categories/hook/fetch_categories.dart
+ create mode 100644 videosharing/lib/src/categories/hook/fetch_home_categories.dart
+ create mode 100644 videosharing/lib/src/categories/hook/results/categories_results.dart
+ create mode 100644 videosharing/lib/src/products/controllers/colors_sizes_notifier.dart
+ create mode 100644 videosharing/lib/src/products/widgets/color_selection_widget.dart
+ create mode 100644 videosharing/lib/src/products/widgets/expandable_text.dart
+ create mode 100644 videosharing/lib/src/products/widgets/product_bottom_bar.dart
+ create mode 100644 videosharing/lib/src/products/widgets/product_sizes_widget.dart
+ create mode 100644 videosharing/lib/src/products/widgets/similar_products.dart
+ create mode 100644 videosharing/lib/src/profile/views/orders_screen.dart
+ create mode 100644 videosharing/lib/src/profile/views/policy_screen.dart
+ create mode 100644 videosharing/lib/src/profile/views/shipping_address_screen.dart
+ create mode 100644 videosharing/lib/src/profile/widget/tile_widget.dart
+ create mode 100644 z-----remember--todo--imp---240917---.md
+ create mode 100644 z----v-v-sh-notes--0022-------.md
+
 
 
 % =========================================================================================

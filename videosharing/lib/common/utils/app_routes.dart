@@ -6,6 +6,9 @@ import 'package:videosharing/src/entrypoint/views/entrypoint.dart';
 import 'package:videosharing/src/notification/views/notification_screen.dart';
 import 'package:videosharing/src/onboarding/views/onboarding_screen.dart';
 import 'package:videosharing/src/products/views/product_screen.dart';
+import 'package:videosharing/src/profile/views/orders_screen.dart';
+import 'package:videosharing/src/profile/views/policy_screen.dart';
+import 'package:videosharing/src/profile/views/shipping_address_screen.dart';
 import 'package:videosharing/src/search/views/search_screen.dart';
 import 'package:videosharing/src/splashscreen/views/splashscreen_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -28,8 +31,10 @@ final GoRouter _router =
   ),
   // GoRoute(path: '/review',
   // builder: (context, state) => const ReviewsPage(),),
-  // GoRoute(path: '/policy',
-  // builder: (context, state) => const PolicyPage(),),
+  GoRoute(
+    path: '/policy',
+    builder: (context, state) => const PolicyPage(),
+  ),
   // GoRoute(path: '/verification',
   // builder: (context, state) => const VerificationPage(),),
   GoRoute(
@@ -40,10 +45,10 @@ final GoRouter _router =
   //   path: '/help',
   //   builder: (context, state) => const HelpCenterPage(),
   // ),
-  // GoRoute(
-  //   path: '/orders',
-  //   builder: (context, state) => const OrdersPage(),
-  // ),
+  GoRoute(
+    path: '/orders',
+    builder: (context, state) => const OrdersPage(),
+  ),
   GoRoute(
     path: '/login',
     builder: (context, state) => const LoginPage(),
@@ -64,10 +69,11 @@ final GoRouter _router =
   //   path: '/addaddress',
   //   builder: (context, state) => const AddAddressPage(),
   // ),
-  // GoRoute(
-  //   path: '/addresses',
-  //   builder: (context, state) => const AddressesListPage(),
-  // ),
+  GoRoute(
+    path: '/addresses',
+    builder: (context, state) =>
+        const ShippingAddress(), // sn= {{mb= not isn=}}
+  ),
   GoRoute(
     path: '/notifications',
     builder: (context, state) => const NotificationsPage(),
@@ -89,12 +95,11 @@ final GoRouter _router =
   //   builder: (context, state) => const FailedPayment(),
   // ),
   GoRoute(
-    path: '/product/:id',
-    builder: (BuildContext context, GoRouterState state) {
-      final productId = state.pathParameters['id'];
-      return ProductPage(productId: productId.toString());
-    }
-  ),
+      path: '/product/:id',
+      builder: (BuildContext context, GoRouterState state) {
+        final productId = state.pathParameters['id'];
+        return ProductPage(productId: productId.toString());
+      }),
 ]);
 
 GoRouter get router => _router;

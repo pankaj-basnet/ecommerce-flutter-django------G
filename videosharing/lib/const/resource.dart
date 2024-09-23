@@ -42,6 +42,15 @@ class R {
 
   /// ![preview](file:///-------videosharing/assets/images/pic2.png) sn=
   static const String ASSETS_IMAGES_PIC_2_PNG = 'assets/images/pic2.jpg';
+
+    static const String ASSETS_IMAGES_SHOES_1 =
+      'assets/images/SHOES-1.jpg';
+
+        static const String ASSETS_IMAGES_SHOES_2 =
+      'assets/images/SHOES-2.jpg';
+        static const String ASSETS_IMAGES_SHOES_3 =
+      'assets/images/SHOES-3.jpg';
+
 }
  
  
