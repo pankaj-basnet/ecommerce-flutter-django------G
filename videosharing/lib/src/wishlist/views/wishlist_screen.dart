@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:videosharing/common/services/storage.dart';
 import 'package:videosharing/common/utils/kcolors.dart';
 import 'package:videosharing/common/utils/kstrings.dart';
 import 'package:videosharing/common/widgets/app_style.dart';
 import 'package:videosharing/common/widgets/reusable_text.dart';
+import 'package:videosharing/src/auth/views/login_screen.dart';
 import 'package:videosharing/src/products/widgets/explore_products.dart';
 
 class WishListPage extends StatelessWidget {
@@ -10,6 +12,12 @@ class WishListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String? accessToken = Storage().getString('accessToken');
+
+    if (accessToken == null) {
+      return const LoginPage();
+    }
+
     return Scaffold(
         appBar: AppBar(
           title: Center(

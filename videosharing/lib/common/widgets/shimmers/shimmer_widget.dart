@@ -29,10 +29,15 @@ class ShimmerWidget extends StatelessWidget {
   Widget _buildShimmerLine(
       {required double height, required double width, required double radius}) {
     return Shimmer.fromColors(
-        baseColor: Colors.grey[300]!,
-        highlightColor: Kolors.kGray.withOpacity(0.3),
+        baseColor: const Color.fromARGB(255, 190, 21, 21)!,
+        // baseColor: Colors.grey[300]!, //isn=
+        highlightColor: const Color.fromARGB(255, 36, 30, 227).withOpacity(0.3),
+        // highlightColor: Kolors.kGray.withOpacity(0.3), // isn=
         child: Container(
           height: height,
+          width: width,
+          // radius: radius,
+          
         ));
   }
 }

@@ -1,18 +1,31 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';              // isn=
+import 'package:flutter_hooks/flutter_hooks.dart';              // isn=
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_svg/svg.dart';              // isn=
+import 'package:go_router/go_router.dart';              // isn=
+import 'package:provider/provider.dart';              // isn=
 import 'package:videosharing/common/utils/kcolors.dart';
 import 'package:videosharing/common/widgets/app_style.dart';
 import 'package:videosharing/common/widgets/reusable_text.dart';
-import 'package:videosharing/const/constants.dart';
+import 'package:videosharing/common/widgets/shimmers/categories_shimmer.dart';
+// import 'package:videosharing/const/constants.dart'; //isn = {removed because categories comes from fetch_home_categories.dart }
 import 'package:videosharing/src/categories/controllers/category_notifier.dart';
+import 'package:videosharing/src/categories/hook/fetch_home_categories.dart';
 
-class HomeCategoriesList extends StatelessWidget {
+class HomeCategoriesList extends HookWidget {
   const HomeCategoriesList({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final results = fetchHomeCategories();
+    final categories = results.categories;
+    final isLoading = results.isLoading;
+    final error = results.error;
+    
+    if (isLoading) {
+      return const CatergoriesShimmer();
+    }
+
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 3.w),
       child: SizedBox(

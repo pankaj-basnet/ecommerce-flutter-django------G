@@ -44,6 +44,11 @@ class EmailTextField extends StatelessWidget {
           }
         },
         // style: appStyle(12, Kolors.kDark, FontWeight.normal),
+        style: TextStyle(
+          fontSize: 12,
+          color: Kolors.kDark,
+          fontWeight: FontWeight.normal,
+        ),
         decoration: InputDecoration(
           hintText: hintText,
           prefixIcon: prefixIcon,

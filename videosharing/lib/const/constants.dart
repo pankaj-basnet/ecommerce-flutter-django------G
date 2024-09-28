@@ -70,37 +70,44 @@ List<Categories> categories = [
   Categories(
       title: "Pants",
       id: 1,
-      imageUrl:
+      imageUrl: "https://m.media-amazon.com/images/I/610IIi6wHuL._SY879_.jpg",
           // "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
           // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pKdTq7-lUUtNMf3IBew1An2_QZq9Tv-UVQ&s"
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ43ALATMTeI1fXfhss5NSg9qUhHyh-NHLD1w&s"),
+          // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ43ALATMTeI1fXfhss5NSg9qUhHyh-NHLD1w&s"
+          ),
   Categories(
       title: "T-Shirts",
       id: 5,
-      imageUrl:
-          // "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pKdTq7-lUUtNMf3IBew1An2_QZq9Tv-UVQ&s"),
-  Categories(
-      title: "Sneakers",
-      id: 3,
-      imageUrl:
+      imageUrl: "https://m.media-amazon.com/images/I/61RnEeBMjFL._SX569_.jpg",
           // "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
           // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pKdTq7-lUUtNMf3IBew1An2_QZq9Tv-UVQ&s"
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCaCN_ZPB9T0GUjDqNGz_o3NYA2UgL1GvoA&s"),
+          ),
+  Categories(
+    title: "Sneakers",
+    id: 3,
+    imageUrl: "https://m.media-amazon.com/images/I/51qWaijmKEL._SY695_.jpg",
+
+    // "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
+    // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pKdTq7-lUUtNMf3IBew1An2_QZq9Tv-UVQ&s"
+    // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCaCN_ZPB9T0GUjDqNGz_o3NYA2UgL1GvoA&s"
+  ),
   Categories(
       title: "Dresses",
       id: 2,
-      imageUrl:
+      imageUrl: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3934f32d-7f9e-4e80-ab7a-623078532e93.__CR0,0,300,300_PT0_SX300_V1___.jpg",
           // "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
           // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pKdTq7-lUUtNMf3IBew1An2_QZq9Tv-UVQ&s"
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSahSAnVAHyIJb99hCuKZGnOMijUlRUvMRg4g&s"),
+          // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSahSAnVAHyIJb99hCuKZGnOMijUlRUvMRg4g&s"
+          ),
   Categories(
       title: "Jackets",
       id: 4,
-      imageUrl:
+      imageUrl: "https://m.media-amazon.com/images/I/51uwoukevPL._SX679_.jpg",
+
           // "https://salvationarmy.ca/wp-content/uploads/2020/08/Thrift-store-day-web-image.jpg"
           // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pKdTq7-lUUtNMf3IBew1An2_QZq9Tv-UVQ&s"
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYqAtoZvG9TrOky3QcTRQizCNyVgJURZqKdw&s"),
+          // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYqAtoZvG9TrOky3QcTRQizCNyVgJURZqKdw&s"
+          ),
 ];
 
 // var products = [

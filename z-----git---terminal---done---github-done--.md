@@ -356,6 +356,73 @@ $ git commit -am "files created with no code ----needed until VIDEO-2---TIME 25m
 
 
 
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--backend/dj24 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   fashion_backend/backend/__pycache__/settings.cpython-312.pyc
+        modified:   fashion_backend/backend/__pycache__/urls.cpython-312.pyc
+        modified:   fashion_backend/backend/settings.py
+        modified:   fashion_backend/backend/urls.py
+        modified:   fashion_backend/db.sqlite3
+        modified:   requirements.txt
+        modified:   z-------git-done----github-not-done--.md
+        modified:   z-------terminal---imp--.md
+        modified:   z------notes-----v-v-v-sh---.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fashion_backend/core/
+        requirements2-0926-.txt
+        z-------packages-------.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--backend/dj24 (main)
+$ git add .
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--backend/dj24 (main)
+$ git commit -am "=============          ===================          VID-02           ==================             categories page loading with data from django backend ----  time V-2---0-hr-24-min   ============================================================================="
+[main 16ef3b4] =============          ===================          VID-02           ==================             categories page loading with data from django backend ----  time V-2---0-hr-24-min   =============================================================================
+ 34 files changed, 508 insertions(+), 27 deletions(-)
+ create mode 100644 fashion_backend/core/__init__.py
+ create mode 100644 fashion_backend/core/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 fashion_backend/core/__pycache__/admin.cpython-312.pyc
+ create mode 100644 fashion_backend/core/__pycache__/apps.cpython-312.pyc
+ create mode 100644 fashion_backend/core/__pycache__/models.cpython-312.pyc
+ create mode 100644 fashion_backend/core/__pycache__/serializers.cpython-312.pyc
+ create mode 100644 fashion_backend/core/__pycache__/urls.cpython-312.pyc
+ create mode 100644 fashion_backend/core/__pycache__/views.cpython-312.pyc
+ create mode 100644 fashion_backend/core/admin.py
+ create mode 100644 fashion_backend/core/apps.py
+ create mode 100644 fashion_backend/core/migrations/0001_initial.py
+ create mode 100644 fashion_backend/core/migrations/__init__.py
+ create mode 100644 fashion_backend/core/migrations/__pycache__/0001_initial.cpython-312.pyc
+ create mode 100644 fashion_backend/core/migrations/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 fashion_backend/core/models.py
+ create mode 100644 fashion_backend/core/serializers.py
+ create mode 100644 fashion_backend/core/templatetags/__init__.py
+ create mode 100644 fashion_backend/core/templatetags/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 fashion_backend/core/templatetags/__pycache__/customtags.cpython-312.pyc
+ create mode 100644 fashion_backend/core/templatetags/customtags.py
+ create mode 100644 fashion_backend/core/tests.py
+ create mode 100644 fashion_backend/core/urls.py
+ create mode 100644 fashion_backend/core/views.py
+ create mode 100644 requirements2-0926-.txt
+ create mode 100644 z-------packages-------.md
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--backend/dj24 (main)
+$ date
+Fri, Sep 27, 2024  2:00:55 PM
+
+
+
+
 % =========================================================================================
 % =========================================================================================
 % =========================================================================================

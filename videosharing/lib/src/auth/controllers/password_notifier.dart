@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PasswordNotifier with ChangeNotifier {
-  bool _password = false;
+  bool _password = true;
 
   bool get password => _password;
 
@@ -14,4 +14,6 @@ class PasswordNotifier with ChangeNotifier {
     _password = !_password;
     notifyListeners();
   }
+
+
 }

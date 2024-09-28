@@ -12,6 +12,7 @@ import 'package:videosharing/common/utils/app_routes.dart';
 import 'package:videosharing/common/utils/environment.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:videosharing/common/utils/kstrings.dart';
+import 'package:videosharing/src/auth/controllers/auth_notifier.dart';
 import 'package:videosharing/src/auth/controllers/password_notifier.dart';
 import 'package:videosharing/src/categories/controllers/category_notifier.dart';
 import 'package:videosharing/src/entrypoint/controllers/bottom_tab_notifier.dart';
@@ -38,6 +39,8 @@ void main() async {
       ChangeNotifierProvider(create: (_) => ProductNotifier()),
       ChangeNotifierProvider(create: (_) => ColorSizesNotifier()),
       ChangeNotifierProvider(create: (_) => PasswordNotifier()),
+      ChangeNotifierProvider(create: (_) => AuthNotifier()),
+
       
     ],
     child: const MyApp(),

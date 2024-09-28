@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:videosharing/common/utils/kcolors.dart';
@@ -23,29 +21,34 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
         return Container(
           // height: 500.h,
           // height: MediaQuery.of(context).size.height * 0.9,
-          height: MediaQuery.of(context).size.height * 0.7,
+          // height: MediaQuery.of(context).size.height, // sn= { doesnot work}
+          height: MediaQuery.of(context).size.height * 0.7, //isn=
           decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
           ),
-          child: const Padding(
+          child: Padding(
+            // mb= const by isn=
             padding: const EdgeInsets.all(20.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Fashion App Help Center',
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    color: Kolors.kPrimary,
-                    fontWeight: FontWeight.bold,
+                Center(
+                  child: Text(
+                    'Fashion App Help Center',
+                    style: TextStyle(
+                      fontSize: 12.0,
+                      // fontSize: 18.0, // isn=
+                      color: Kolors.kPrimary,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    // style: appStyle(
+                    //   18.0,
+                    //   Kolors.kPrimary,
+                    //   FontWeight.bold,
+                    // ),
                   ),
-                  // style: appStyle(
-                  //   18.0,
-                  //   Kolors.kPrimary,
-                  //   FontWeight.bold,
-                  // ),
                 ),
 
                 //............
@@ -66,8 +69,10 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
                 // ==========================================================
                 // FAQ Section (Replace with actual FAQS)
                 const Text(
+                  // mb= const by isn=
                   'FAQs',
-                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold),
+                  // style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold), //isn=
                 ),
                 // const SizedBox(height: 5.0), // mb= isn=
                 ListTile(
@@ -135,7 +140,7 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
                 // ),
 
                 //======================================================================
-                const Row(
+                Row(
                   children: [
                     Icon(MaterialCommunityIcons.phone_outline),
                     // SizedBox( // uncommented temporarily --- {sn=}
@@ -158,10 +163,13 @@ Future<dynamic> showHelpCenterBottomSheet(BuildContext context) {
                 //   //  onPressed: () {print('-----------');},    // <--- error: invalid contant value
                 //   child: const Text('Visit Full Help Center'),
                 // ),
-                // ElevatedButton(onPressed: () {}, child: Text('data')),     // <--- error: invalid contant value
+                // ElevatedButton(onPressed: () {}, child: Text('data')),     // <--- error: invalid contant value {{ solve stackoverflow}}
+                // <--- error caused by "const" in parent widget "Padding": invalid contant value {{ solve stackoverflow}} --- remove constant in padding
 
                 //self note ----
-                CustomButton(text: 'Visit Full Help Center'),
+                ElevatedButton(
+                    onPressed: () {}, child: Text('Visit Full Help Center')),
+                // CustomButton(text: 'Visit Full Help Center'),
               ],
             ),
           ),

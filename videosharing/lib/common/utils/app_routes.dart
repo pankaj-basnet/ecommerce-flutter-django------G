@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:videosharing/src/auth/views/login_screen.dart';
+import 'package:videosharing/src/auth/views/registration_screen.dart';
 import 'package:videosharing/src/categories/views/categories_screen.dart';
 import 'package:videosharing/src/categories/views/category_page.dart';
 import 'package:videosharing/src/entrypoint/views/entrypoint.dart';
@@ -53,10 +54,10 @@ final GoRouter _router =
     path: '/login',
     builder: (context, state) => const LoginPage(),
   ),
-  // GoRoute(
-  //   path: '/register',
-  //   builder: (context, state) => const RegistrationPage(),
-  // ),
+  GoRoute(
+    path: '/register',
+    builder: (context, state) => const RegistrationPage(),
+  ),
   GoRoute(
     path: '/categories',
     builder: (context, state) => const CategoriesPage(),
