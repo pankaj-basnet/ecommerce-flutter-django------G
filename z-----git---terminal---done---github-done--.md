@@ -429,6 +429,135 @@ Fri, Sep 27, 2024  2:00:55 PM
 
 
 
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+
+
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .env.development
+        modified:   lib/common/utils/app_routes.dart
+        modified:   lib/common/widgets/email_textfield.dart
+        modified:   lib/common/widgets/help_bottom_sheet.dart
+        modified:   lib/common/widgets/shimmers/categories_shimmer.dart
+        modified:   lib/common/widgets/shimmers/shimmer_widget.dart
+        modified:   lib/const/constants.dart
+        modified:   lib/main.dart
+        modified:   lib/src/auth/controllers/auth_notifier.dart
+        modified:   lib/src/auth/controllers/password_notifier.dart
+        modified:   lib/src/auth/views/login_screen.dart
+        modified:   lib/src/auth/views/registration_screen.dart
+        modified:   lib/src/cart/views/cart_screen.dart
+        modified:   lib/src/categories/hook/fetch_categories.dart
+        modified:   lib/src/categories/hook/fetch_home_categories.dart
+        modified:   lib/src/categories/hook/results/categories_results.dart
+        modified:   lib/src/categories/views/categories_screen.dart
+        modified:   lib/src/categories/views/category_page.dart
+        modified:   lib/src/home/widgets/categories_list.dart
+        modified:   lib/src/profile/views/profile_screen.dart
+        modified:   lib/src/wishlist/views/wishlist_screen.dart
+        modified:   ../z-----git---terminal---done---github-done--.md
+        modified:   ../z----v-v-sh-notes--0077---prac----.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lib/common/widgets/shimmers/list_shimmer.dart
+        lib/src/categories/hook/fetch_products_by_category.dart
+        lib/src/categories/hook/results/category_products_results.dart
+        lib/src/categories/widgets/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git add .
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git commit -am "---V2---time-49min-----product-by-category--displayed----data-from-django-backend"
+[main a16848b] ---V2---time-49min-----product-by-category--displayed----data-from-django-backend
+ 27 files changed, 1566 insertions(+), 278 deletions(-)
+ create mode 100644 videosharing/lib/common/widgets/shimmers/list_shimmer.dart
+ create mode 100644 videosharing/lib/src/categories/hook/fetch_products_by_category.dart
+ create mode 100644 videosharing/lib/src/categories/hook/results/category_products_results.dart
+ create mode 100644 videosharing/lib/src/categories/widgets/products_by_category.dart
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git log
+commit a16848bb769eaa1b00cf34deddadb80c18a9beaa (HEAD -> main)
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:               Sat Sep 28 13:59:43 2024 +0545
+
+    ---V2---time-49min-----product-by-category--displayed----data-from-django-backend
+
+commit 317a36455ca50b36e2e55c1b972b9595125aaba7 (origin/main)
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Mon Sep 23 10:54:15 2024 +0545
+
+    login screen done ---registration screen going on ---------- time 8hr-40m---
+
+commit c45560a34fda236fef6f2a3da021df15fed4311c
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Tue Sep 17 14:57:43 2024 +0545
+
+    files created with no code ----needed until VIDEO-2---TIME 25min----V1-6hr50m--product page half done------------------------------------------------------------  time 6hr50s  ----------------
+
+commit e6b32cbfe8fe069d88c797d7a37ea6b82b645b02
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Sun Sep 15 10:11:08 2024 +0545
+
+    ----------------  time 6hr17m25s  ---------------- home page done -- wishlist little done -- ProductPage started -- ................................................................................
+
+commit a06a06e72ed434889f6f27cfb1a1a6833821a047
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Fri Sep 13 20:52:35 2024 +0545
+
+    ----------------  time 4hr55m57s  ---------------- homepage to categories page to category page done ................................................................................
+
+commit 47b3844254a75545a19d607229aa5fa1e6968873
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Thu Sep 12 11:36:22 2024 +0545
+
+
+    ---V2---time-49min-----product-by-category--displayed----data-from-django-backend
+
+
+------------------------------------------------------
+
+
+
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+
+
+
+------------------------------------------------------
+
+
+
+
+
 % =========================================================================================
 % =========================================================================================
 % =========================================================================================

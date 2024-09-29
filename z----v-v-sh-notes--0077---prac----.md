@@ -8,10 +8,22 @@
 ---D--:\src_dev\z--proj\ecommerce-flutter-django-dbestech--backend\dj24\fashion_backend\core\urls.py
 
 
+https://firebase.flutter.dev/docs/firestore/usage/#adding-documents
+https://firebase.flutter.dev/docs/firestore/usage/#adding-documents
+https://firebase.flutter.dev/docs/firestore/usage/#adding-documents
+
+
 =========               VERY IMPORTANT NOTE             ==============
 =========               VERY IMPORTANT NOTE             ==============
 
 
+<!-- time 10hr + -->
+<!-- time 10hr + -->
+<!-- time 10hr + -->
+<!-- time 10hr + -->
+<!-- time 10hr + -->
+<!-- time 10hr + -->
+<!-- time 10hr + -->
 <!-- time 10hr + -->
 
 //       
@@ -408,8 +420,12 @@ no changes added to commit (use "git add" and/or "git commit -a")
 saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--backend/dj24 (main)
 $ git add .
 
+
 saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--backend/dj24 (main)
-$ git commit -am "=============          ===================          VID-02           ==================             categories page loading with data from django backend ----  time V-2---0-hr-24-min   ============================================================================="
+
+$ git commit -am "=============          ===================          VID-02           ==================             categories page                                                 loading with data from django backend ----  time V-2---0-hr-24-min   ============================================================================="
+
+
 [main 16ef3b4] =============          ===================          VID-02           ==================             categories page loading with data from django backend ----  time V-2---0-hr-24-min   =============================================================================
  34 files changed, 508 insertions(+), 27 deletions(-)
  create mode 100644 fashion_backend/core/__init__.py
@@ -471,15 +487,15 @@ Just click on any widget and then click Ctrl+. and click Extract Widget option a
 
 ------------------------------------------------------
 
-created with vs code shortcut --- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\widgets
+created with vs code shortcut --- lib\src\categories\widgets
 created with vs code shortcut --- lib\src\categories\widgets\products_by_category.dart
 
 ------------------------------------------------------
 
-D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\views\category_page.dart
-D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\widgets\products_by_category.dart
+lib\src\categories\views\category_page.dart
+lib\src\categories\widgets\products_by_category.dart
 
-D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\views\category_page.dart
+lib\src\categories\views\category_page.dart
 
 ------------------------------------------------------
 
@@ -487,32 +503,32 @@ already created --- lib\common\widgets\shimmers\list_shimmer.dart -- ListShimmer
 
 ------------------------------------------------------
 
-copy repeated code --- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\views\categories_screen.dart
+copy repeated code --- lib\src\categories\views\categories_screen.dart
 
-D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\widgets\products_by_category.dart
+lib\src\categories\widgets\products_by_category.dart
 
-copy repeated code --- D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\home\widgets\categories_list.dart
+copy repeated code --- lib\src\home\widgets\categories_list.dart
 
 ------------------------------------------------------
 
-create D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\hook\fetch_products_by_category.dart
+create lib\src\categories\hook\fetch_products_by_category.dart
 
 ------------------------------------------------------
 
 copy code from any hook created already --- like videosharing\lib\src\categories\hook\fetch_home_categories.dart
 
-paste into D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\hook\fetch_products_by_category.dart
+paste into lib\src\categories\hook\fetch_products_by_category.dart
 
 
 ------------------------------------------------------
 
-copy code from D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\hook\results\categories_results.dart
+copy code from lib\src\categories\hook\results\categories_results.dart
 
-paste into D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\hook\results\category_products_results.dart
+paste into lib\src\categories\hook\results\category_products_results.dart
 
 ------------------------------------------------------
 
-D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\hook\fetch_products_by_category.dart
+lib\src\categories\hook\fetch_products_by_category.dart
 
 ------------------------------------------------------
 
@@ -520,15 +536,15 @@ vscode shortcut --- "Remove unnecessary interpolation braces" ---- ${string_name
 
 ------------------------------------------------------
 
-D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\widgets\products_by_category.dart
-check D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\controllers\category_notifier.dart
+lib\src\categories\widgets\products_by_category.dart
+check lib\src\categories\controllers\category_notifier.dart
 
 ------------------------------------------------------
 error ---- no products displayed in each category --- no error in backend django ---- 
 
-D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\categories\hook\fetch_products_by_category.dart
+lib\src\categories\hook\fetch_products_by_category.dart
 error ---- type 'Null' is not a subtype of type 'double'
-check "double" --- mb= "ratings" parameter --- check D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--\videosharing\lib\src\products\models\products_model.dart
+check "double" --- mb= "ratings" parameter --- check lib\src\products\models\products_model.dart
 
 spelling mistake "rating" ----- change to "ratings"
 
@@ -537,84 +553,401 @@ products\models\products_model.dart --- dj24\fashion_backend\core\models.py
 
 python manage.py makemigrations
 
-------------------------------------------------------
+
+
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+# Date:               Sat Sep 28 13:59:43 2024 +0545 ========================================
+
+
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .env.development
+        modified:   lib/common/utils/app_routes.dart
+        modified:   lib/common/widgets/email_textfield.dart
+        modified:   lib/common/widgets/help_bottom_sheet.dart
+        modified:   lib/common/widgets/shimmers/categories_shimmer.dart
+        modified:   lib/common/widgets/shimmers/shimmer_widget.dart
+        modified:   lib/const/constants.dart
+        modified:   lib/main.dart
+        modified:   lib/src/auth/controllers/auth_notifier.dart
+        modified:   lib/src/auth/controllers/password_notifier.dart
+        modified:   lib/src/auth/views/login_screen.dart
+        modified:   lib/src/auth/views/registration_screen.dart
+        modified:   lib/src/cart/views/cart_screen.dart
+        modified:   lib/src/categories/hook/fetch_categories.dart
+        modified:   lib/src/categories/hook/fetch_home_categories.dart
+        modified:   lib/src/categories/hook/results/categories_results.dart
+        modified:   lib/src/categories/views/categories_screen.dart
+        modified:   lib/src/categories/views/category_page.dart
+        modified:   lib/src/home/widgets/categories_list.dart
+        modified:   lib/src/profile/views/profile_screen.dart
+        modified:   lib/src/wishlist/views/wishlist_screen.dart
+        modified:   ../z-----git---terminal---done---github-done--.md
+        modified:   ../z----v-v-sh-notes--0077---prac----.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lib/common/widgets/shimmers/list_shimmer.dart
+        lib/src/categories/hook/fetch_products_by_category.dart
+        lib/src/categories/hook/results/category_products_results.dart
+        lib/src/categories/widgets/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git add .
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git commit -am "---V2---time-49min-----product-by-category--displayed----data-from-django-backend"
+[main a16848b] ---V2---time-49min-----product-by-category--displayed----data-from-django-backend
+ 27 files changed, 1566 insertions(+), 278 deletions(-)
+ create mode 100644 videosharing/lib/common/widgets/shimmers/list_shimmer.dart
+ create mode 100644 videosharing/lib/src/categories/hook/fetch_products_by_category.dart
+ create mode 100644 videosharing/lib/src/categories/hook/results/category_products_results.dart
+ create mode 100644 videosharing/lib/src/categories/widgets/products_by_category.dart
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+saurav@LAPTOP-JS10JJ6V MINGW64 /d/src_dev/z--proj/ecommerce-flutter-django-dbestech--/videosharing (main)
+$ git log
+commit a16848bb769eaa1b00cf34deddadb80c18a9beaa (HEAD -> main)
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:               Sat Sep 28 13:59:43 2024 +0545
+
+    ---V2---time-49min-----product-by-category--displayed----data-from-django-backend
+
+commit 317a36455ca50b36e2e55c1b972b9595125aaba7 (origin/main)
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Mon Sep 23 10:54:15 2024 +0545
+
+    login screen done ---registration screen going on ---------- time 8hr-40m---
+
+commit c45560a34fda236fef6f2a3da021df15fed4311c
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Tue Sep 17 14:57:43 2024 +0545
+
+    files created with no code ----needed until VIDEO-2---TIME 25min----V1-6hr50m--product page half done------------------------------------------------------------  time 6hr50s  ----------------
+
+commit e6b32cbfe8fe069d88c797d7a37ea6b82b645b02
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Sun Sep 15 10:11:08 2024 +0545
+
+    ----------------  time 6hr17m25s  ---------------- home page done -- wishlist little done -- ProductPage started -- ................................................................................
+
+commit a06a06e72ed434889f6f27cfb1a1a6833821a047
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Fri Sep 13 20:52:35 2024 +0545
+
+    ----------------  time 4hr55m57s  ---------------- homepage to categories page to category page done ................................................................................
+
+commit 47b3844254a75545a19d607229aa5fa1e6968873
+Author: Pankaj Basnet <pankajbasnet2020@hotmail.com>
+Date:   Thu Sep 12 11:36:22 2024 +0545
+
+
+    ---V2---time-49min-----product-by-category--displayed----data-from-django-backend
 
 
 ------------------------------------------------------
 
 
-------------------------------------------------------
 
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
+% # Date:               Sat Sep 28 13:59:43 2024 +0545 ======================================//>>==
 
-------------------------------------------------------
-
-
-------------------------------------------------------
-
-
-------------------------------------------------------
 
 
 ------------------------------------------------------
 
-
-------------------------------------------------------
-
-
-------------------------------------------------------
-
-
-------------------------------------------------------
+scaffold x-cross  --- src\categories\widgets\products_by_category.dart --- views\categories_screen.dart
+ if (isLoading) { // {scaffold x-cross on white background due to this "isLoading" --- shimmer also not working sn=}
+      return const Scaffold(
+        body: ListShimmer(),
+      );
+    }
 
 
 ------------------------------------------------------
+create lib\src\products\hooks\fetch_products.dart
+copy code into lib\src\categories\hook\fetch_categories.dart
 
-
+paste into lib\src\products\hooks\fetch_products.dart
 ------------------------------------------------------
 
-
+lib\src\products\hooks\fetch_products.dart
 ------------------------------------------------------
 
-
+check D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--backend\dj24\fashion_backend\core\urls.py
+check D:\src_dev\z--proj\ecommerce-flutter-django-dbestech--backend\dj24\fashion_backend\core\views.py
+check 
 ------------------------------------------------------
 
-
-------------------------------------------------------
-
-
-------------------------------------------------------
+lib\src\products\hooks\fetch_products.dart
 
 
-------------------------------------------------------
-
-
-------------------------------------------------------
+    Uri url; --- {mb= variable used , not "final" or "const"} --- videosharing\lib\src\products\hooks\fetch_products.dart
 
 
 ------------------------------------------------------
 
+check lib\src\categories\views\category_page.dart
+
+copy code from lib\src\categories\widgets\products_by_category.dart
+paste into lib\src\products\widgets\explore_products.dart
+------------------------------------------------------
+
+check lib\src\home\controllers\home_tab_notifier.dart
+------------------------------------------------------
+lib\src\home\controllers\home_tab_notifier.dart
+
+important --- passing function as parameter --- pass refetch function from "HomeTabNotifier" to "ExploreProducts" to ""HomeTabNotifier" 
 
 ------------------------------------------------------
 
-
-------------------------------------------------------
-
-
-------------------------------------------------------
-
-
-------------------------------------------------------
-
-
-------------------------------------------------------
-
+    print('REFETCH RAN----lib\src\products\hooks\fetch_products.dart');
 
 ------------------------------------------------------
 
 
 ------------------------------------------------------
 
+% ------ last tab of home tab "kids" ----- no data from backend --- with no internet connected to backend
 
+E/FlutterJNI(27453): 	at io.flutter.embedding.engine.FlutterJNI.decodeImage(FlutterJNI.java:559)
+I/flutter (27453):  ..... 10000 ..........  ................. 
+I/flutter (27453):  ..... cfe .......... 
+I/flutter (27453): ---kids---------------D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart
+I/flutter (27453): ----------------------------------------------------------------------------------------------------------------------------
+I/flutter (27453): REFETCH RAN----D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrcproductshooksetch_products.dart
+I/flutter (27453):  ..... cfe ....cfeCountHomeTabNotifier...... 10002 ...... 
+I/flutter (27453):  .....cfeCountExploreProductshome2..... 1008 .......... 
+I/flutter (27453):  .....cfeCountExploreProductshome..... 101 ..........    ............................................
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 12
+I/flutter (27453):  .......... 2 .......... 
+I/flutter (27453):  ..... 10000 ..........  ................. 
+I/flutter (27453):  ..... cfe .......... 
+I/flutter (27453): ---kids---------------D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart
+I/flutter (27453): ----------------------------------------------------------------------------------------------------------------------------
+I/flutter (27453): REFETCH RAN----D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrcproductshooksetch_products.dart
+I/flutter (27453):  ..... cfe ....cfeCountHomeTabNotifier...... 10002 ...... 
+I/flutter (27453):  .....cfeCountExploreProductshome2..... 1009 .......... 
+I/flutter (27453):  .....cfeCountExploreProductshome..... 101 ..........    ............................................
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 13
+I/flutter (27453):  .......... 2 .......... 
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 14
+I/flutter (27453):  .......... 2 .......... 
+
+
+------------------------------------------------------
+
+
+------------------------------------------------------
+% Restarted flutter app ------- data came from django backend
+% Restarted flutter app ------- data came from django backend
+% Restarted flutter app ------- data came from django backend
+
+Restarted application in 5,272ms.
+
+I/flutter (27453):  .....cfeCountExploreProductshome2..... 1001 .......... 
+I/flutter (27453):  .....cfeCountExploreProductshome..... 101 ..........    ............................................
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453): ---useEffect---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrcproductshooksetch_products.dart----
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 1
+I/flutter (27453):  .......... 2 .......... 
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 2
+I/flutter (27453):  .......... 2 .......... 
+
+------------------------------------------------------
+
+time ----- 1-hr--13-min ---------- problem --- ExploreProducts build function called twice on restart --- {mb= also on tab change} explore_products.dart 
+time ----- 1-hr--13-min ---------- problem --- ExploreProducts build function called twice on restart --- {mb= also on tab change} explore_products.dart 
+time ----- 1-hr--13-min ---------- problem --- ExploreProducts build function called twice on restart --- {mb= also on tab change} explore_products.dart 
+time ----- 1-hr--13-min ---------- problem --- ExploreProducts build function called twice on restart --- {mb= also on tab change} explore_products.dart 
+lib\src\products\widgets\explore_products.dart
+
+------------------------------------------------------
+
+
+------------------------------------------------------
+
+% on tab changed to "WOMEN" in explore products 
+% on tab changed to "WOMEN" in explore products 
+% on tab changed to "WOMEN" in explore products 
+
+
+I/flutter (27453):  ..... 10000 ..........  ................. 
+I/flutter (27453):  ..... cfe .......... 
+I/flutter (27453): ---women---------------D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart
+I/flutter (27453): ----------------------------------------------------------------------------------------------------------------------------
+I/flutter (27453): REFETCH RAN----D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrcproductshooksetch_products.dart
+I/flutter (27453):  ..... cfe ....cfeCountHomeTabNotifier...... 10002 ...... 
+I/flutter (27453):  .....cfeCountExploreProductshome2..... 1002 .......... 
+I/flutter (27453):  .....cfeCountExploreProductshome..... 101 ..........    ............................................
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 3
+I/flutter (27453):  .......... 2 .......... 
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 4
+I/flutter (27453):  .......... 2 .......... 
+I/flutter (27453):  ..... 10000 ..........  ................. 
+I/flutter (27453):  ..... cfe .......... 
+I/flutter (27453): ---women---------------D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart
+I/flutter (27453): ----------------------------------------------------------------------------------------------------------------------------
+I/flutter (27453): REFETCH RAN----D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrcproductshooksetch_products.dart
+I/flutter (27453):  ..... cfe ....cfeCountHomeTabNotifier...... 10002 ...... 
+I/flutter (27453):  .....cfeCountExploreProductshome2..... 1003 .......... 
+I/flutter (27453):  .....cfeCountExploreProductshome..... 101 ..........    ............................................
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 5
+I/flutter (27453):  .......... 2 .......... 
+I/flutter (27453):  .......... 0 .......... 
+I/flutter (27453):  .......... 1 .......... 
+I/flutter (27453): refetch set
+I/flutter (27453): ---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart---
+I/flutter (27453): ----------------------------------------------
+I/flutter (27453): 6
+I/flutter (27453):  .......... 2 .......... 
+
+
+------------------------------------------------------
+
+deleted // void Function()? refetch;  ---  void setRefetch(Function() r) {  ----by isn=
+time 1hr-14m
+
+ExploreProducts ---HomeTabNotifier  // refetch!(); //isn= {deleted --- time 1hr-14m V2}
+
+------------------------------------------------------
+lib\src\products\hooks\fetch_products.dart
+// useEffect will run whenever "categories page" will run isn= {{explaination 2 --- time 1hr-15-m--V2--- useEffect run whenever there is change in index of queryType}} --- ---fetch_products.dart
+
+------------------------------------------------------
+lib\src\products\hooks\fetch_products.dart
+  useEffect(() {   fetchData(); return;},  [queryType.index]);
+------------------------------------------------------
+
+
+------------------------------------------------------
+% time 1hr--18-m ---- V2 ------- HOME tabs complete---  products by clothesType unisex, men m wimen
+
+
+............ 0 .......... 
+
+ ---useEffect---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrcproductshooksetch_products.dart----
+  .......... 1 .......... 
+  .......... 2 .......... 
+ gralloc_register_buffer hnd=0x8f5af780, share_fd=88, share_attr_fd=-1, magic=51647890, format=1, internal_format=1, byte_stride=1920, flags=4, usage=0xb00, size=1639680, width=480, height=854, internalWidth=480, internalHeight=854, stride=480, base=0x7b2ef000, writeOwner=0, attr_base=0xffffffff, yuv_info=1, fd=-1, buf_idx=0, offset=0, min_pgsz=4096, phyaddr= Shared attribute region not available to be mapped
+  .......... 0 .......... 
+  .......... 1 .......... 
+  .......... 2 .......... 
+
+
+  ------------------------------------------------------
+  ------------------------------------------------------
+
+
+  % tab changes ---------- from "all" to "Unisex"
+  % tab changes ---------- from "all" to "Unisex"
+  % tab changes ---------- from "all" to "Unisex"
+
+  ...cfeCountHomeTabNotifier.. 10000 ..........  ...1...rf........... 
+  ..... cfe .......... 
+ ---unisex---------------D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart
+ ----------------------------------------------------------------------------------------------------------------------------
+
+
+..... cfe ....cfeCountHomeTabNotifier...... 10002 ...... 
+  .....cfeCountExploreProductshome2..... 1002 .......... 
+  .....cfeCountExploreProductshome..... 101 ..........    ............................................
+  .......... 0 .......... 
+ ---useEffect---D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrcproductshooksetch_products.dart----
+  .......... 1 .......... 
+  .......... 2 .......... 
+  ...cfeCountHomeTabNotifier.. 10000 ..........  ...2...rf........... 
+  ..... cfe .......... 
+ ---unisex---------------D:src_devz--projecommerce-flutter-django-dbestech--ideosharinglibsrchomecontrollershome_tab_notifier.dart
+ ----------------------------------------------------------------------------------------------------------------------------
+  ..... cfe ....cfeCountHomeTabNotifier...... 10002 ...... 
+  .....cfeCountExploreProductshome2..... 1003 .......... 
+  .....cfeCountExploreProductshome..... 101 ..........    ............................................
+  .......... 0 .......... 
+  .......... 1 .......... 
+  .......... 2 .......... 
+  .......... 0 .......... 
+  .......... 1 .......... 
+  .......... 2 ..........
+
+[29/Sep/2024 22:37:25] "GET /api/products/byType/?clothesType=women HTTP/1.1" 200 2060
+--------------------------
+[29/Sep/2024 22:37:27] "GET /api/products/byType/?clothesType=unisex HTTP/1.1" 200 1205
+[29/Sep/2024 22:37:34] "GET /api/products/ HTTP/1.1" 200 5872
+[29/Sep/2024 22:37:35] "GET /api/products/popular HTTP/1.1" 301 0
+[29/Sep/2024 22:37:35] "GET /api/products/popular/ HTTP/1.1" 200 3876
+[29/Sep/2024 22:37:37] "GET /api/products/categories/home/ HTTP/1.1" 200 504
+[29/Sep/2024 22:37:41] "GET /api/products/ HTTP/1.1" 200 5872
+[29/Sep/2024 22:37:46] "GET /api/products/categories/home/ HTTP/1.1" 200 504
+[29/Sep/2024 22:37:54] "GET /api/products/categories/home/ HTTP/1.1" 200 504
+[29/Sep/2024 22:37:59] "GET /api/products/categories HTTP/1.1" 301 0
+[29/Sep/2024 22:37:59] "GET /api/products/categories/ HTTP/1.1" 200 605
+[29/Sep/2024 22:38:01] "GET /api/products/category/?category=6 HTTP/1.1" 200 437
+[29/Sep/2024 22:38:06] "GET /api/products/category/?category=3 HTTP/1.1" 200 1871
+[29/Sep/2024 22:38:38] "GET /api/products/category/?category=4 HTTP/1.1" 200 1566
 ------------------------------------------------------
 
 

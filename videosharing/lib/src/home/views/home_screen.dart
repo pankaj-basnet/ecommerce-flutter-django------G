@@ -22,6 +22,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   int _currentTabIndex = 0;
 
+  int cfeCountExploreProductshome2 = 1000; // sn=
+
+  
+  
+
+
+
   @override
   void initState() {
     _tabController = TabController(length: homeTabs.length, vsync: this);
@@ -41,6 +48,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     });
   }
 
+
   @override
   void dispose() {
     _tabController.removeListener(_handleSelection);
@@ -51,6 +59,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+
+      
+      cfeCountExploreProductshome2 += 1; // sn= { variable defined in class -- not a "final" or "const" variable}
+       print(' .....cfeCountExploreProductshome2..... ${cfeCountExploreProductshome2} .......... '); // sn=
+
+
+    int cfeCountExploreProductshome = 100;
+
+        cfeCountExploreProductshome += 1; // sn=
+       print(' .....cfeCountExploreProductshome..... $cfeCountExploreProductshome ..........    ............................................'); // sn=
+
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(110),

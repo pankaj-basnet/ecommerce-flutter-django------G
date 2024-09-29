@@ -84,7 +84,7 @@ class CategoriesPage extends HookWidget {
     //   );
     // }
 
-    if (isLoading) {
+    if (isLoading) { // {scaffold x-cross on white background due to this "isLoading" --- shimmer also not working sn=}
       return const Scaffold(
         body: ListShimmer(),
       );
